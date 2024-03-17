@@ -25,7 +25,9 @@
   height: 100%;
   width: 30vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../assests/authimg.jpg);
+    url(../assests/auth-img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -66,13 +68,15 @@
   border-radius: 10px;
   color: #fff;
 }
+ /* Login form Css */
 .log-form {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
-  margin-right: 40px;
+  margin-top: 25px;
+  /* margin-right: 10px; */
 }
 .log-form p {
+  font-size: small;
   font-weight: 600;
 }
 .log-form input {
@@ -92,7 +96,7 @@
   justify-content: center;
 }
 .log-form button {
-  margin: 5px;
+  margin: 15px;
   width: 80px;
   height: 30px;
   background-color: #40a2e3;
@@ -120,7 +124,7 @@
   display: none;
 }
 .footer-img {
-  margin: 5px;
+  margin: 10px;
   width: 60%;
   display: flex;
   flex-direction: row;
@@ -136,4 +140,47 @@
 .footer-img img:hover {
     scale: 1.5; 
   }
-  
+/* Registration form Css */
+
+.reg-form {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+  /* margin-right: 40px; */
+}
+.reg-form p {
+  font-size: small;
+  font-weight: 600;
+}
+.reg-form input {
+  background-color: #bbe2ec;
+  width: 20vw;
+  height: 5vh;
+  padding: 3px;
+  font-weight: 600;
+  border: 1px solid #000;
+  margin-bottom: 5px;
+}
+.reg-form input:focus {
+  outline: none;
+}
+.reg-btn {
+  display: flex;
+  justify-content: center;
+}
+.reg-form button {
+  margin: 5px;
+  width: 80px;
+  height: 30px;
+  background-color: #40a2e3;
+  border: 1px solid #000;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in,transform 0.2s ease ;
+}
+.reg-form button:hover {
+  background-color: #bbe2ec;
+  color: #000;
+  transform: translateY(-5px);
+}

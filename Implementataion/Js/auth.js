@@ -1,11 +1,11 @@
-const toggle = (id) => {
+function toggle(id) {
     var x = document.querySelector('.log-form');
     var y = document.querySelector('.reg-form');
     var a = document.querySelector('.logintext');
     var b = document.querySelector('.registertext');
     if (id === 'log-form') {
         x.style.display = 'flex';
-        y.style.display = 'none';
+        y.style.display = 'none';   
         a.style.backgroundColor = '#40a2e3';
         a.style.borderRadius = '10px';
         a.style.padding='10px 20px 10px 20px';
