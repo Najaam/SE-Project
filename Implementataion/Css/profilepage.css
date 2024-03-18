@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #fbf9f1;
+    align-items: center;
+    width:100vw ;
+}
+.card{
+    height: 80vh;
+    background-color: #dbe7c9;
+    width: 30vw;
+    border-radius: 10px;
+    
+}
+.profile-pic{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+
+}
+.profile-pic img{
+    height: 80px;
+    width:80px;
+margin: 30px 0px 0px 20px;
+
+}
+.profile-pic button{
+    height: 5vh;
+    background-color: #40a2e3;
+    color: #fff;
+margin: 55px 0px 0px 50px;
+border: 1.5px solid #000;
+transition: background-color 0.3s ease-in,color 0.3s ease-in,transform  0.3s ease-in;
+}
+.profile-pic button:hover {
+    background-color: #bbe2ec;
+    color: #000;
+    transform: translateY(-5px);
+  }
+.info{
+    background-color: #bbe2ec;
+    height: 40vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin:20px 0px 0px 60px;
+     border-radius: 10px;
+     border: 1px solid #000;
+
+}
+.infodata{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+     /* margin:20px 0px 0px 60px; */
+     border-radius: 10px;
+     /* border: 1px solid #000; */
+     justify-content: center; 
+     margin-bottom: 20px;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.userdata{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 10px;
+}
+.info p{
+    font-weight: 700;
+}
+.activity {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+
+}
+.activity button{
+    background-color: #40a2e3;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    transition: background-color 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.activity button:hover {
+    background-color: #bbe2ec;
+    transform: translateY(-5px);
+  }
+.activity button img{
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+}
+.info img{
+    margin-top: 10px;
+    height: 20px;
+    width: 20px;
+    margin-left: 200px;
+}
+
+
+
+
