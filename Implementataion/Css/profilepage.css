@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    font-family: 'poppins';
 }
 .main{
     height: 100vh;
@@ -20,13 +21,13 @@
     height: 20vh;
     width: 100%;
     display: flex;
-
+    border-radius: 50%;
 }
 .profile-pic img{
     height: 80px;
     width:80px;
 margin: 30px 0px 0px 20px;
-
+border-radius: 50%;
 }
 .profile-pic button{
     height: 5vh;
@@ -58,12 +59,10 @@ transition: background-color 0.3s ease-in,color 0.3s ease-in,transform  0.3s eas
     width: 100%;
     display: flex;
     align-items: center; 
-     /* margin:20px 0px 0px 60px; */
      border-radius: 10px;
-     /* border: 1px solid #000; */
+     border: 1px solid #000;
      justify-content: center; 
-     margin-bottom: 20px;
-}
+    }
 .data{
     display: flex;
     flex-direction: column;
@@ -76,7 +75,8 @@ transition: background-color 0.3s ease-in,color 0.3s ease-in,transform  0.3s eas
     gap: 10px;
 }
 .info p{
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 15px;
 }
 .activity {
     margin-top: 20px;

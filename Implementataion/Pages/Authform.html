@@ -9,10 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="main">
+      <div class="alert">
+        <img src="../assests/boy.png" />
+        <p class="alerttext"></p>
+      </div>
       <div class="main-card">
         <div class="card-img"></div>
         <div class="card-form">
@@ -22,38 +27,51 @@
             <p class="registertext" onclick="toggle('reg-form')">Register</p>
           </div>
           <div class="log-form">
-            <form class="form" action="">
-              <p>Username</p>
-              <input type="text" placeholder="Enter your Name" />
-              <p>Password</p>
-              <input type="text" placeholder="Enter your Password" />
-              <div class="form-btn">
-                <button ><a href="Profilepage.html">Login</a></button>
-              </div>
-            </form>
+            <p>Username</p>
+            <input id="loginuser" type="text" placeholder="Enter your Name" />
+            <p>Password</p>
+            <input
+              id="loginpass"
+              type="password"
+              placeholder="Enter your Password"
+              onmouseover="unhidePass()"
+            />
+            <div class="form-btn">
+              <button id="loginbtn">Login</button>
+            </div>
+
             <div class="form-footer">
               <p>Continue with</p>
               <div class="footer-img">
-                <img src="/assests/google.png" alt="" srcset="" />
-                <img src="/assests/facebook.png" alt="" srcset="" />
-                <img src="/assests/apple.png" alt="" srcset="" />
+                <img onclick="togoogle()" src="/assests/google.png" />
+                <img onclick="tofacebook()" src="/assests/facebook.png" />
+                <img onclick="toappleid()" src="/assests/apple.png" />
               </div>
             </div>
           </div>
           <div class="reg-form">
-            <form action="" >
-              <p>Username</p>
-              <input type="text" placeholder="Enter your Name" />
-              <p>Email</p>
-              <input type="text" placeholder="Enter your Email" />
-              <p>Phone</p>
-              <input type="text" placeholder="Enter your Phone No" />
-              <p>Password</p>
-              <input type="text" placeholder="Enter your Password" />
-              <div class="form-btn">
-                <button>Register</button>
-              </div>
-            </form>
+            <p>Username</p>
+            <input id="userinput" type="text" placeholder="Enter your Name" />
+            <p>Email</p>
+            <input id="usermail" type="email" placeholder="Enter your Email" />
+            <p>Phone</p>
+            <input
+              id="userphone"
+              type="number"
+              placeholder="Enter your Phone No"
+              min="1000000000"
+              max="9999999999"
+            />
+            <p>Password</p>
+            <input
+              id="userpass"
+              type="password"
+              placeholder="Enter your Password"
+              onmouseover="unhidePassword()"
+            />
+            <div class="form-btn">
+              <button id="savedata">Register</button>
+            </div>
           </div>
         </div>
       </div>

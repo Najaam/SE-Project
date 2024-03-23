@@ -26,8 +26,8 @@
   width: 30vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../assests/auth-img1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -68,7 +68,7 @@
   border-radius: 10px;
   color: #fff;
 }
- /* Login form Css */
+/* Login form Css */
 .log-form {
   display: flex;
   flex-direction: column;
@@ -104,7 +104,8 @@
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease-in, color 0.3s ease-in,transform 0.2s ease ;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in,
+    transform 0.2s ease;
 }
 .log-form button:hover {
   background-color: #bbe2ec;
@@ -138,8 +139,8 @@
   transition: scale 0.25s ease-in;
 }
 .footer-img img:hover {
-    scale: 1.5; 
-  }
+  scale: 1.5;
+}
 /* Registration form Css */
 
 .reg-form {
@@ -177,10 +178,26 @@
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease-in, color 0.3s ease-in,transform 0.2s ease ;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in,
+    transform 0.2s ease;
 }
 .reg-form button:hover {
   background-color: #bbe2ec;
   color: #000;
   transform: translateY(-5px);
 }
+.alert {
+  display: none;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  transition: opacity 0.5s ease;
+}
+input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
