@@ -4,6 +4,7 @@ function toggle(id) {
   var a = document.querySelector(".logintext");
   var b = document.querySelector(".registertext");
   if (id === "log-form") {
+    
     x.style.display = "flex";
     y.style.display = "none";
     a.style.backgroundColor = "#40a2e3";
@@ -139,7 +140,7 @@ function clearlogfields () {
     document.getElementById("loginpass").value = "";
 }
 function togoogle() {
-    window.location.href="https://accounts.google.com/v3/signin/"
+    window.location.href="https://accounts.google.com/v3/signin/confirmidentifier?hl=en-gb&ifkv=ARZ0qKJb0R2amYaEjz7GmlTT3BxAI2WoO31fL-qHvoA6FezTsEjOR_tppFkOJOhuBYGdT-VAipnQ9g&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1779420172%3A1711188188873453&theme=mn&ddm=0"
 }
 function tofacebook() {
     window.location.href="https://web.facebook.com/login/?_rdc=1&_rdr"
