@@ -100,13 +100,24 @@
     
         
       <div class="submenu">
-        <div class=" submenu-list ">
+        <div class=" submenu-list " id="Hotels" onclick="setstate('hotelContainer')">
           <img src="assests/hotel.png" alt="" />
-          <p class="submenutext ">Hotels</p>
+          <p  class="submenutext" >Hotels</p>
+          
         </div>
-        <div class="submenu-list">
+        
+        <div class=" submenu-list " id="Places" onclick="setstate('PlacesContainer')">
+          <img src="assests/map.png" alt="" />
+          <p class="submenutext"  >Places</p>
+          
+        
+        </div>
+
+
+        
+        <div class=" submenu-list" id="Resturants" onclick="setstate('ResturantsContainer')">
           <img src="assests/dinner.png" alt="" />
-          <p class="submenutext">Restraunts</p>
+          <p class="submenutext">Resturants</p>
         </div>
         <div class="submenu-list">
           <img src="assests/public-transport.png" alt="" />
@@ -116,7 +127,7 @@
           <img src="assests/currency.png" alt="" />
           <p class="submenutext">Currency-Converter</p>
         </div>
-        <div class="submenu-list">
+        <div class="submenu-list" id="Recommand" onclick="setstate('RecommandationsContainer')">
           <img src="assests/Recommend.png" alt="" />
           <p class="submenutext">Recommendation</p>
         </div>
@@ -126,9 +137,11 @@
         <input type="text" id="searchInput" placeholder="Search For Hotels" />
         <button id="searchButton">Search</button>
       </div>
-      <div class="hotelContainer">
-      </div>
+
       <div id="hotelContainer"></div>
+      <div id="PlacesContainer"></div>
+      <div id="ResturantsContainer"></div>
+      <div id="RecommandationsContainer"></div>
 </div>
   </div>
     

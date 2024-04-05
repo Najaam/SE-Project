@@ -1,5 +1,59 @@
+function setstate(id){
+  var x = document.querySelector("#hotelContainer");
+  var y = document.querySelector("#PlacesContainer");
+  var z=document.querySelector("#ResturantsContainer");
+  var w = document.querySelector("#RecommandationsContainer");
+  if (id === "hotelContainer") {
+    x.style.display = "flex";
+    y.style.display = "none";
+    z.style.display = "none";
+    w.style.display = "none";
+  }
+  else if(id === "PlacesContainer"){
+    x.style.display = "none";
+    y.style.display = "flex";
+    z.style.display = "none";
+    w.style.display = "none";
+  }
+  else if(id === "ResturantsContainer"){
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "flex";
+    w.style.display = "none";
+  }
+else if(id === "RecommandationsContainer"){
+  x.style.display = "none";
+  y.style.display = "none";
+  z.style.display = "none";
+  w.style.display = "flex";
+
+
+}
+
+  document.getElementById("Hotels").addEventListener("click", function() {
+    setstate("hotelContainer");
+  });
+  
+  document.getElementById("Places").addEventListener("click", function() {
+    setstate("PlacesContainer");
+  });
+  document.getElementById("Resturants").addEventListener("click", function() {
+    setstate("ResturantsContainer");
+  });
+
+  document.getElementById("Recommand").addEventListener("click", function() {
+    setstate("RecommandationsContainer");
+  });
+
+
+  }
+
+
+
+
 // Check if all images in the slideshow are loaded
 function allSlidesLoaded(slides, callback) {
+
   var loadedImages = 0;
   slides.forEach(function(slide) {
       var image = slide.querySelector("img");
@@ -177,39 +231,53 @@ var hotels = [
     button: "Book Now",
   },
   {
-    name: "Al Jaddaf Hotel",
-    location: "UAE",
-    city: "ABU DHABI",
-    img: "https://images.unsplash.com/photo-1600011689032-8b628b8a8747?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Green Tree Hotel",
+    location: "china",
+    city: "Beijing",
+    img: "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Book Now",
   },
   
   {
-    name: "Al Jaddaf Hotel",
-    location: "UAE",
-    city: "ABU DHABI",
-    img: "https://images.unsplash.com/photo-1600011689032-8b628b8a8747?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Joy Fall Hotel",
+    location: "china",
+    city: "Shanghai",
+    img: "https://images.unsplash.com/photo-1541971875076-8f970d573be6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Book Now",
   },
   {
-    name: "Al Jaddaf Hotel",
-    location: "UAE",
-    city: "ABU DHABI",
-    img: "https://images.unsplash.com/photo-1600011689032-8b628b8a8747?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Ma Maison",
+    location: "Italy",
+    city: "Rome",
+    img: "https://images.unsplash.com/photo-1554647286-f365d7defc2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Book Now",
   },
   {
-    name: "Al Jaddaf Hotel",
-    location: "UAE",
-    city: "ABU DHABI",
-    img: "https://images.unsplash.com/photo-1600011689032-8b628b8a8747?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Sun suite Hotel",
+    location: "Italy",
+    city: "Milan",
+    img: "https://images.unsplash.com/photo-1549294413-26f195200c16?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Book Now",
   },
   {
-    name: "Al Jaddaf Hotel",
-    location: "UAE",
-    city: "ABU DHABI",
-    img: "https://images.unsplash.com/photo-1600011689032-8b628b8a8747?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "City Box Hotel",
+    location: "Norway",
+    city: "Oslo",
+    img: "https://images.unsplash.com/photo-1554009975-d74653b879f1?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "Book Now",
+  },
+  {
+    name: "Brienzersee Hotel",
+    location: "Switzerland",
+    city: "Zermatt",
+    img: "https://images.unsplash.com/photo-1535827841776-24afc1e255ac?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "Book Now",
+  },
+  {
+    name: "Residence Hotel",
+    location: "Switzerland",
+    city: "Grindelwald",
+    img: "https://images.unsplash.com/photo-1573052905904-34ad8c27f0cc?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Book Now",
   },
 ];
@@ -257,3 +325,160 @@ createHotelCards(hotels);
 function login_btn() {
   window.location.href = "../Pages/Authform.html";
 }
+
+var Places = [
+  {
+    name: "Mehran Hotel",
+    location: "Pakistan",
+    city: "Karachi",
+    img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "Book Now",
+  },
+  
+];
+function createPlacesCards(Places) {
+  var container = document.getElementById("PlacesContainer");
+  container.innerHTML = "";
+  Places.forEach(function (Places) {
+    var card = document.createElement("div");
+    card.classList.add("card");
+    var cardContent = `
+          <img src="${Places.img}" alt="${Places.name}">
+          <div class="card-text">
+              <h2>${Places.name}</h2>
+              <p>${Places.location}</p>
+              <p class="city">${Places.city}</p>
+              <button>${Places.button}</button>
+          </div>
+      `;
+    card.innerHTML = cardContent;
+    container.appendChild(card);
+  });
+}
+
+function filterPlaces(searchTerm) {
+  var filteredPlaces = Places.filter(function (Places) {
+    return (
+      Places.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      Places.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      Places.city.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+  createPlacesCards(filteredPlaces);
+}
+
+document
+  .getElementById("searchInput")
+  .addEventListener("input", function (event) {
+    var searchTerm = event.target.value.trim();
+    filterPlaces(searchTerm);
+  });
+
+createPlacesCards(Places);
+
+
+
+var Resturants = [
+  {
+    name: "Mehran Resturant",
+    location: "Pakistan",
+    city: "Karachi",
+    img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "Book Now",
+  },
+  
+];
+function createResturantsCards(Resturants) {
+  var container = document.getElementById("ResturantsContainer");
+  container.innerHTML = "";
+  Resturants.forEach(function (Resturants) {
+    var card = document.createElement("div");
+    card.classList.add("card");
+    var cardContent = `
+          <img src="${Resturants.img}" alt="${Resturants.name}">
+          <div class="card-text">
+              <h2>${Resturants.name}</h2>
+              <p>${Resturants.location}</p>
+              <p class="city">${Resturants.city}</p>
+              <button>${Resturants.button}</button>
+          </div>
+      `;
+    card.innerHTML = cardContent;
+    container.appendChild(card);
+  });
+}
+
+function filterResturants(searchTerm) {
+  var filteredResturants = Resturants.filter(function (Resturants) {
+    return (
+      Resturants.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      Resturants.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      Resturants.city.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+  createResturantsCards(filteredResturants);
+}
+
+document
+  .getElementById("searchInput")
+  .addEventListener("input", function (event) {
+    var searchTerm = event.target.value.trim();
+    filterResturants(searchTerm);
+  });
+
+createResturantsCards(Resturants);
+
+
+
+
+
+
+var Recommandations = [
+  {
+    name: "Mehran Recommandations",
+    location: "Pakistan",
+    city: "Karachi",
+    img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "Book Now",
+  },
+  
+];
+function createRecommandationsCards(Recommandations) {
+  var container = document.getElementById("RecommandationsContainer");
+  container.innerHTML = "";
+  Recommandations.forEach(function (Recommandations) {
+    var card = document.createElement("div");
+    card.classList.add("card");
+    var cardContent = `
+          <img src="${Recommandations.img}" alt="${Recommandations.name}">
+          <div class="card-text">
+              <h2>${Recommandations.name}</h2>
+              <p>${Recommandations.location}</p>
+              <p class="city">${Recommandations.city}</p>
+              <button>${Recommandations.button}</button>
+          </div>
+      `;
+    card.innerHTML = cardContent;
+    container.appendChild(card);
+  });
+}
+
+function filterRecommandations(searchTerm) {
+  var filteredRecommandations = Resturants.filter(function (Recommandations) {
+    return (
+      Recommandations.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      Recommandations.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      Recommandations.city.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+  createRecommandationsCards(filteredRecommandations);
+}
+
+document
+  .getElementById("searchInput")
+  .addEventListener("input", function (event) {
+    var searchTerm = event.target.value.trim();
+    filterRecommandations(searchTerm);
+  });
+
+createRecommandationsCards(Recommandations);

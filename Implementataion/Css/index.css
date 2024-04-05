@@ -96,7 +96,7 @@ nav {
   height: 52px;
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 90%;
   justify-content: space-between;
   /* margin: 5px; */
   cursor: pointer;
@@ -203,6 +203,34 @@ nav {
   width: 100%;
   margin-top: 10px;
 }
+#PlacesContainer {
+  display: none;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+#ResturantsContainer {
+  display: none;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#RecommandationsContainer {
+  display: none;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
 
 .card {
   flex-basis: calc(20% - 20px); 
@@ -253,45 +281,6 @@ nav {
   font-size: 12px;
   color: #7a7979;
  
-}
-/* Keep the existing loader CSS */
-
-.loader {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  border: 3px solid;
- 
-  border-color: transparent transparent #c7e39e #c7e39e;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-}
-.loader::after,
-.loader::before {
-  content: '';  
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  border: 3px solid;
-  border-color: #bbe2ec #bbe2ec transparent transparent;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-sizing: border-box;
-  animation: rotationBack 0.5s linear infinite;
-  transform-origin: center center;
-}
-.loader::before {
-  width: 32px;
-  height: 32px;
-  border-color: #40a2e3 #40a2e3 transparent transparent;
-  animation: rotation 1.5s linear infinite;
 }
     
 @keyframes rotation {
