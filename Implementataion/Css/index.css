@@ -196,22 +196,28 @@ nav {
 
 #hotelContainer {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-  justify-content: space-evenly;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
   align-items: center;
   width: 100%;
   margin-top: 10px;
 }
 
 .card {
-  flex-basis: calc(20% - 20px); /* Set flex-basis to 20% minus margin */
+  flex-basis: calc(20% - 20px); 
   height: 270px;
   border-radius: 10px;
   box-shadow: 0px 5px 15px #b4b4b8;
   margin: 10px;
   cursor: pointer;
   transition: transform 0.5s ease;
-
+}
+.card p{
+  padding-left: 10px;
+}
+.card h2{
+  padding-left: 5px;
 }
 .card button{
   margin: 5px;
@@ -222,14 +228,12 @@ nav {
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease-in, color 0.3s ease-in,
-    transform 0.2s ease;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 .card button:hover {
   background-color: #bbe2ec;
   color: #000;
-  transform: translateY(-5px);
 }
 
 .card:hover {
@@ -250,7 +254,63 @@ nav {
   color: #7a7979;
  
 }
+/* Keep the existing loader CSS */
 
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+ 
+  border-color: transparent transparent #c7e39e #c7e39e;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: #bbe2ec #bbe2ec transparent transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #40a2e3 #40a2e3 transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+    
 /* custom animations */
 @keyframes slideInOut {
   0% {
@@ -274,4 +334,23 @@ opacity: 0.7;
     transform: translateX(-25%) scale(0.7);
   }
 }
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationBack {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}
+
 

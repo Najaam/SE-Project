@@ -71,12 +71,11 @@ const login = () => {
   const username = document.getElementById("loginuser").value;
   const password = document.getElementById("loginpass").value;
 
-  // Retrieve user data from local storage
   const userData = JSON.parse(localStorage.getItem("userData"));
 
   if (userData) {
     if (username === userData.username && password === userData.password) {
-        window.location.href = "../Pages/Profilepage.html";
+        window.location.href = "../index.html";
         clearlogfields();
         showAlert("Login successful", y, sucessstyle);
     } else{
