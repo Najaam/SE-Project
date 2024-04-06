@@ -1,111 +1,91 @@
-function setstate(id){
+function setstate(id) {
+
+  var a = document.querySelector("#CurrencyConverter");
+  var b = document.querySelector(".searchbar");
+  var w = document.querySelector("#RecommandationsContainer");
   var x = document.querySelector("#hotelContainer");
   var y = document.querySelector("#PlacesContainer");
-  var z=document.querySelector("#ResturantsContainer");
-  var w = document.querySelector("#RecommandationsContainer");
+  var z = document.querySelector("#ResturantsContainer");
   if (id === "hotelContainer") {
     x.style.display = "flex";
     y.style.display = "none";
     z.style.display = "none";
     w.style.display = "none";
-  }
-  else if(id === "PlacesContainer"){
+    a.style.display = "none";
+  } else if (id === "PlacesContainer") {
     x.style.display = "none";
     y.style.display = "flex";
     z.style.display = "none";
     w.style.display = "none";
-  }
-  else if(id === "ResturantsContainer"){
+    a.style.display = "none";
+  } else if (id === "ResturantsContainer") {
     x.style.display = "none";
     y.style.display = "none";
     z.style.display = "flex";
     w.style.display = "none";
+    a.style.display = "none";
+  } else if (id === "RecommandationsContainer") {
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+    w.style.display = "flex";
+    a.style.display = "none";
+  }else if(id === "CurrencyConverter"){
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+    w.style.display = "none";
+    a.style.display = "flex"; 
+    b.style.display = "none";
   }
-else if(id === "RecommandationsContainer"){
-  x.style.display = "none";
-  y.style.display = "none";
-  z.style.display = "none";
-  w.style.display = "flex";
 
-
-}
-
-  document.getElementById("Hotels").addEventListener("click", function() {
+  document.getElementById("Hotels").addEventListener("click", function () {
     setstate("hotelContainer");
   });
-  
-  document.getElementById("Places").addEventListener("click", function() {
+
+  document.getElementById("Places").addEventListener("click", function () {
     setstate("PlacesContainer");
   });
-  document.getElementById("Resturants").addEventListener("click", function() {
+  document.getElementById("Resturants").addEventListener("click", function () {
     setstate("ResturantsContainer");
   });
 
-  document.getElementById("Recommand").addEventListener("click", function() {
+  document.getElementById("Recommand").addEventListener("click", function () {
     setstate("RecommandationsContainer");
   });
-
-
-  }
-
-
-
-
-// Check if all images in the slideshow are loaded
-function allSlidesLoaded(slides, callback) {
-
-  var loadedImages = 0;
-  slides.forEach(function(slide) {
-      var image = slide.querySelector("img");
-      if (image.complete) {
-          loadedImages++;
-      }
-  });
-  if (loadedImages === slides.length) {
-      callback();
-  }
 }
 
-// Function to show or hide the loader
-function toggleLoader(show) {
-  var loader = document.querySelector(".loader");
-  if (show) {
-      loader.style.display = "block";
-  } else {
-      loader.style.display = "none";
-  }
+// slideshow animation
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
 }
 
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
 
-function showSlides() {
-  var slides = document.getElementsByClassName("mySlides");
-  var slideIndex = 0;
-
-  
-  for (var i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
 
-  // Display one slide at a time
-  slideIndex++;
-  if (slideIndex > slides.length) {
-      slideIndex = 1;
-  }
   slides[slideIndex - 1].style.display = "block";
-
-  // Call showSlides function recursively after 4 seconds
-  setTimeout(showSlides, 4000);
 }
-
-showSlides();
-
-var slides = document.querySelectorAll(".mySlides");
-
-
-allSlidesLoaded(slides, function() {
-  toggleLoader(false); 
-});
-
+setInterval(function () {
+  plusSlides(1);
+}, 4000);
 var hotels = [
   {
     name: "Mehran Hotel",
@@ -237,7 +217,7 @@ var hotels = [
     img: "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Book Now",
   },
-  
+
   {
     name: "Joy Fall Hotel",
     location: "china",
@@ -334,7 +314,6 @@ var Places = [
     img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Book Now",
   },
-  
 ];
 function createPlacesCards(Places) {
   var container = document.getElementById("PlacesContainer");
@@ -376,8 +355,6 @@ document
 
 createPlacesCards(Places);
 
-
-
 var Resturants = [
   {
     name: "Mehran Resturant",
@@ -386,7 +363,6 @@ var Resturants = [
     img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Book Now",
   },
-  
 ];
 function createResturantsCards(Resturants) {
   var container = document.getElementById("ResturantsContainer");
@@ -428,11 +404,6 @@ document
 
 createResturantsCards(Resturants);
 
-
-
-
-
-
 var Recommandations = [
   {
     name: "Mehran Recommandations",
@@ -441,7 +412,6 @@ var Recommandations = [
     img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Book Now",
   },
-  
 ];
 function createRecommandationsCards(Recommandations) {
   var container = document.getElementById("RecommandationsContainer");
@@ -467,7 +437,9 @@ function filterRecommandations(searchTerm) {
   var filteredRecommandations = Resturants.filter(function (Recommandations) {
     return (
       Recommandations.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      Recommandations.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      Recommandations.location
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase()) ||
       Recommandations.city.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
@@ -482,3 +454,50 @@ document
   });
 
 createRecommandationsCards(Recommandations);
+
+//curnncy converter
+fetch('https://api.exchangerate-api.com/v4/latest/USD')
+    .then(response => response.json())
+    .then(data => {
+      const currencies = Object.keys(data.rates);
+      const fromCurrencySelect = document.getElementById('fromCurrency');
+      const toCurrencySelect = document.getElementById('toCurrency');
+
+      currencies.forEach(currency => {
+        const option1 = document.createElement('option');
+        const option2 = document.createElement('option');
+        option1.value = currency;
+        option1.textContent = currency;
+        option2.value = currency;
+        option2.textContent = currency;
+        fromCurrencySelect.appendChild(option1);
+        toCurrencySelect.appendChild(option2);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching currency data:', error);
+    });
+
+  // Function to convert currency
+// Function to convert currency
+function convertCurrency() {
+  // Fetch input amount, selected currencies, and perform conversion
+  const amount = document.getElementById('amountInput').value;
+  const fromCurrency = document.getElementById('fromCurrency').value;
+  const toCurrency = document.getElementById('toCurrency').value;
+  const resultElement = document.querySelector('.Result');
+  
+  // Fetch exchange rates from API
+  fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
+    .then(response => response.json())
+    .then(data => {
+      const exchangeRate = data.rates[toCurrency];
+      const convertedAmount = amount * exchangeRate;
+      resultElement.style.display = 'flex';
+      resultElement.innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;
+    })
+    .catch(error => {
+      console.error('Error fetching exchange rates:', error);
+      resultElement.innerHTML = 'Error fetching exchange rates';
+    });
+}
