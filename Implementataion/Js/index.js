@@ -1,7 +1,7 @@
 function setstate(id) {
-
   var a = document.querySelector("#CurrencyConverter");
   var b = document.querySelector(".searchbar");
+  var c = document.querySelector("#TransportationContainer");
   var w = document.querySelector("#RecommandationsContainer");
   var x = document.querySelector("#hotelContainer");
   var y = document.querySelector("#PlacesContainer");
@@ -12,31 +12,52 @@ function setstate(id) {
     z.style.display = "none";
     w.style.display = "none";
     a.style.display = "none";
+    b.style.display = "flex";
+
+    c.style.display = "none";
   } else if (id === "PlacesContainer") {
     x.style.display = "none";
     y.style.display = "flex";
     z.style.display = "none";
     w.style.display = "none";
     a.style.display = "none";
+    b.style.display = "flex";
+
+    c.style.display = "none";
   } else if (id === "ResturantsContainer") {
     x.style.display = "none";
     y.style.display = "none";
     z.style.display = "flex";
     w.style.display = "none";
     a.style.display = "none";
+    b.style.display = "flex";
+
+    c.style.display = "none";
   } else if (id === "RecommandationsContainer") {
     x.style.display = "none";
     y.style.display = "none";
     z.style.display = "none";
     w.style.display = "flex";
     a.style.display = "none";
-  }else if(id === "CurrencyConverter"){
+    b.style.display = "flex";
+
+    c.style.display = "none";
+  } else if (id === "CurrencyConverter") {
     x.style.display = "none";
     y.style.display = "none";
     z.style.display = "none";
     w.style.display = "none";
-    a.style.display = "flex"; 
+    a.style.display = "flex";
     b.style.display = "none";
+    c.style.display = "none";
+  } else if (id === "TransportationContainer") {
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+    w.style.display = "none";
+    a.style.display = "none";
+    b.style.display = "flex";
+    c.style.display = "flex";
   }
 
   document.getElementById("Hotels").addEventListener("click", function () {
@@ -52,6 +73,9 @@ function setstate(id) {
 
   document.getElementById("Recommand").addEventListener("click", function () {
     setstate("RecommandationsContainer");
+  });
+  document.getElementById("Transport").addEventListener("click", function () {
+    setstate("TransportationContainer");
   });
 }
 
@@ -456,48 +480,97 @@ document
 createRecommandationsCards(Recommandations);
 
 //curnncy converter
-fetch('https://api.exchangerate-api.com/v4/latest/USD')
-    .then(response => response.json())
-    .then(data => {
-      const currencies = Object.keys(data.rates);
-      const fromCurrencySelect = document.getElementById('fromCurrency');
-      const toCurrencySelect = document.getElementById('toCurrency');
+fetch("https://api.exchangerate-api.com/v4/latest/USD")
+  .then((response) => response.json())
+  .then((data) => {
+    const currencies = Object.keys(data.rates);
+    const fromCurrencySelect = document.getElementById("fromCurrency");
+    const toCurrencySelect = document.getElementById("toCurrency");
 
-      currencies.forEach(currency => {
-        const option1 = document.createElement('option');
-        const option2 = document.createElement('option');
-        option1.value = currency;
-        option1.textContent = currency;
-        option2.value = currency;
-        option2.textContent = currency;
-        fromCurrencySelect.appendChild(option1);
-        toCurrencySelect.appendChild(option2);
-      });
-    })
-    .catch(error => {
-      console.error('Error fetching currency data:', error);
+    currencies.forEach((currency) => {
+      const option1 = document.createElement("option");
+      const option2 = document.createElement("option");
+      option1.value = currency;
+      option1.textContent = currency;
+      option2.value = currency;
+      option2.textContent = currency;
+      fromCurrencySelect.appendChild(option1);
+      toCurrencySelect.appendChild(option2);
     });
+  })
+  .catch((error) => {
+    console.error("Error fetching currency data:", error);
+  });
 
-  // Function to convert currency
 // Function to convert currency
 function convertCurrency() {
   // Fetch input amount, selected currencies, and perform conversion
-  const amount = document.getElementById('amountInput').value;
-  const fromCurrency = document.getElementById('fromCurrency').value;
-  const toCurrency = document.getElementById('toCurrency').value;
-  const resultElement = document.querySelector('.Result');
-  
+  const amount = document.getElementById("amountInput").value;
+  const fromCurrency = document.getElementById("fromCurrency").value;
+  const toCurrency = document.getElementById("toCurrency").value;
+  const resultElement = document.querySelector(".Result");
+
   // Fetch exchange rates from API
   fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       const exchangeRate = data.rates[toCurrency];
       const convertedAmount = amount * exchangeRate;
-      resultElement.style.display = 'flex';
-      resultElement.innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;
+      resultElement.style.display = "flex";
+      resultElement.innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(
+        2
+      )} ${toCurrency}`;
     })
-    .catch(error => {
-      console.error('Error fetching exchange rates:', error);
-      resultElement.innerHTML = 'Error fetching exchange rates';
+    .catch((error) => {
+      console.error("Error fetching exchange rates:", error);
+      resultElement.innerHTML = "Error fetching exchange rates";
     });
 }
+
+var Transportation = [
+  {
+    name: "Mehran Transports",
+    location: "Pakistan",
+    city: "Karachi",
+    img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "Book Now",
+  },
+];
+
+function createTransportationsCards(transportations) {
+  var container = document.getElementById("TransportationContainer");
+  container.innerHTML = "";
+  transportations.forEach(function (transportation) {
+    var card = document.createElement("div");
+    card.classList.add("card");
+    var cardContent = `
+          <img src="${transportation.img}" alt="${transportation.name}">
+          <div class="card-text">
+              <h2>${transportation.name}</h2>
+              <p>${transportation.location}</p>
+              <p class="city">${transportation.city}</p>
+              <button>${transportation.button}</button>
+          </div>
+      `;
+    card.innerHTML = cardContent;
+    container.appendChild(card);
+  });
+}
+
+function filterTransportation(searchTerm) {
+  var filteredTransportations = Transportation.filter(function (transportation) {
+    return (
+      transportation.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      transportation.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      transportation.city.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+  createTransportationsCards(filteredTransportations);
+}
+
+document.getElementById("searchInput").addEventListener("input", function (event) {
+  var searchTerm = event.target.value.trim();
+  filterTransportation(searchTerm);
+});
+
+createTransportationsCards(Transportation);
