@@ -50,62 +50,37 @@ else if(id === "RecommandationsContainer"){
 
 
 
+// slideshow animation
+let slideIndex = 1;
+showSlides(slideIndex);
 
-// Check if all images in the slideshow are loaded
-function allSlidesLoaded(slides, callback) {
-
-  var loadedImages = 0;
-  slides.forEach(function(slide) {
-      var image = slide.querySelector("img");
-      if (image.complete) {
-          loadedImages++;
-      }
-  });
-  if (loadedImages === slides.length) {
-      callback();
-  }
+function plusSlides(n) {
+  showSlides((slideIndex += n));
 }
 
-// Function to show or hide the loader
-function toggleLoader(show) {
-  var loader = document.querySelector(".loader");
-  if (show) {
-      loader.style.display = "block";
-  } else {
-      loader.style.display = "none";
-  }
+function currentSlide(n) {
+  showSlides((slideIndex = n));
 }
 
-
-function showSlides() {
-  var slides = document.getElementsByClassName("mySlides");
-  var slideIndex = 0;
-
-  
-  for (var i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
 
-  // Display one slide at a time
-  slideIndex++;
-  if (slideIndex > slides.length) {
-      slideIndex = 1;
-  }
   slides[slideIndex - 1].style.display = "block";
-
-  // Call showSlides function recursively after 4 seconds
-  setTimeout(showSlides, 4000);
 }
-
-showSlides();
-
-var slides = document.querySelectorAll(".mySlides");
-
-
-allSlidesLoaded(slides, function() {
-  toggleLoader(false); 
-});
-
+setInterval(function () {
+  plusSlides(1);
+}, 4000);
 var hotels = [
   {
     name: "Mehran Hotel",
