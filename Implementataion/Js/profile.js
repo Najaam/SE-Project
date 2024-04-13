@@ -11,7 +11,7 @@ function uploadImage() {
       img.style.border= "1px solid #000"
       img.src = reader.result;
 
-      // Save image data URI to local storage
+      
       localStorage.setItem('profileImage', reader.result);
     };
 
@@ -26,13 +26,12 @@ window.onload = function() {
   if (savedImage) {
     var img = document.getElementById('profileImage');
     img.src = savedImage;
-  // Retrieve user data from localStorage
+  
 }
-// Retrieve user data from localStorage
+
 const userData = JSON.parse(localStorage.getItem("userData"));
 console.log(userData);
 
-// Access HTML elements
 const username = document.getElementById("dataname");
 const useremail = document.getElementById("datamail");
 const userphone = document.getElementById("dataphone");

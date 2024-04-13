@@ -371,6 +371,18 @@ nav {
   transform: translateY(-5px);
 }
 
+.profile{
+  display: none;
+  height: 65px;
+  width: 65px;
+}
+.profile img{
+  height: 65px;
+  width: 65px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
 /* custom animations */
 @keyframes slideInOut {
   0% {
@@ -395,20 +407,3 @@ nav {
   }
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotationBack {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}

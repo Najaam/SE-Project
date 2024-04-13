@@ -293,8 +293,8 @@ function createHotelCards(hotels) {
     var card = document.createElement("div");
     card.classList.add("card");
     var cardContent = `
-          <img src="${hotel.img}" alt="${hotel.name}">
-          <div class="card-text">
+          <img src="${hotel.img}" alt="${hotel.name}" loading="lazy">
+          <div class="card-text" loading="lazy">
               <h2>${hotel.name}</h2>
               <p>${hotel.location}</p>
               <p class="city">${hotel.city}</p>
@@ -330,14 +330,92 @@ function login_btn() {
   window.location.href = "../Pages/Authform.html";
 }
 
+
+function profile() {
+  window.location.href = "../Pages/Profilepage.html";
+}
+
+
+
+
 var Places = [
   {
-    name: "Mehran Hotel",
+    name: "Manora Beach",
     location: "Pakistan",
     city: "Karachi",
-    img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    button: "Book Now",
+    img: "https://plus.unsplash.com/premium_photo-1669018130044-1a5c168d20ae?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
   },
+
+
+  {
+    name: "Taj Mahal",
+    location: "India",
+    city: "Agra",
+    img: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+
+  {
+    name: "Badshahi Mosque",
+    location: "Pakistan",
+    city: "Lahore",
+    img: "https://images.unsplash.com/photo-1702434428628-4c8a191c532a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Galata Tower",
+    location: "Türkiye",
+    city: "Istanbul",
+    img: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Blue Mosque",
+    location: "Türkiye",
+    city: "Istanbul",
+    img: "https://images.unsplash.com/photo-1621165752031-4c8a2cbc5618?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Buckingham Palace",
+    location: "England",
+    city: "London",
+    img: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Brandenburg Gate",
+    location: "Germany",
+    city: "Berlin",
+    img: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Colosseum",
+    location: "Italy",
+    city: "Rome",
+    img: "https://plus.unsplash.com/premium_photo-1676037249901-07b05f763638?q=80&w=2042&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Trevi Fountain",
+    location: "Italy",
+    city: "Rome",
+    img: "https://plus.unsplash.com/premium_photo-1676391399745-b08a99a19b51?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+
+
 ];
 function createPlacesCards(Places) {
   var container = document.getElementById("PlacesContainer");
@@ -381,11 +459,79 @@ createPlacesCards(Places);
 
 var Resturants = [
   {
-    name: "Mehran Resturant",
+    name: "Kolachi Resturant",
     location: "Pakistan",
     city: "Karachi",
-    img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    button: "Book Now",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA5XnrLnxv3_eIXejirlHMVfMN0Pzor1QMV8NV7a9uHA&s",
+    button: "View Info",
+
+  },
+
+
+  {
+    name: "Monal Resturant",
+    location: "Pakistan",
+    city: "Islamabad",
+    img: "https://images.unsplash.com/photo-1640687997745-11fd29b470a5?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+
+  {
+    name: "Hanza Resturant",
+    location: "Türkiye",
+    city: "Istanbul",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCDM0WI40JCfUGTr-W0G7gB7hKw-akaz5ziCPPNDuMvA&s",
+    button: "View Info",
+
+  },
+  {
+    name: "Galata Tower",
+    location: "Türkiye",
+    city: "Istanbul",
+    img: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Blue Mosque",
+    location: "Turkey",
+    city: "Istanbul",
+    img: "https://images.unsplash.com/photo-1621165752031-4c8a2cbc5618?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Buckingham Palace",
+    location: "England",
+    city: "London",
+    img: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Brandenburg Gate",
+    location: "Germany",
+    city: "Berlin",
+    img: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Colosseum",
+    location: "Italy",
+    city: "Rome",
+    img: "https://plus.unsplash.com/premium_photo-1676037249901-07b05f763638?q=80&w=2042&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
+  },
+  {
+    name: "Trevi Fountain",
+    location: "Italy",
+    city: "Rome",
+    img: "https://plus.unsplash.com/premium_photo-1676391399745-b08a99a19b51?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    button: "View Info",
+
   },
 ];
 function createResturantsCards(Resturants) {
@@ -487,7 +633,7 @@ fetch("https://api.exchangerate-api.com/v4/latest/USD")
     const fromCurrencySelect = document.getElementById("fromCurrency");
     const toCurrencySelect = document.getElementById("toCurrency");
 
-    currencies.forEach((currency) => {
+    currencies.forEach((currency,country) => {
       const option1 = document.createElement("option");
       const option2 = document.createElement("option");
       option1.value = currency;
@@ -504,7 +650,6 @@ fetch("https://api.exchangerate-api.com/v4/latest/USD")
 
 // Function to convert currency
 function convertCurrency() {
-  // Fetch input amount, selected currencies, and perform conversion
   const amount = document.getElementById("amountInput").value;
   const fromCurrency = document.getElementById("fromCurrency").value;
   const toCurrency = document.getElementById("toCurrency").value;
@@ -529,11 +674,40 @@ function convertCurrency() {
 
 var Transportation = [
   {
-    name: "Mehran Transports",
+    name: "Daewoo Bus",
     location: "Pakistan",
-    city: "Karachi",
-    img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    city: "Karachi-Lahore-Islamabad-Peshawar",
+    img: "https://thetravellino.com/wp-content/uploads/2023/12/Daewoo-Express-Lahore-Bus-Timings-Ticket-Price-And-Contact-Number.jpg",
     button: "Book Now",
+  },
+
+  {
+    name: "Faisal Movers",
+    location: "Pakistan",
+    city: "Karachi-Lahore-Islamabad",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDpizdoPgLS_IvVjz8RYi6-cYwmPs5awLZP2oPRgVD8dU2RJhQIqJgyQnh0v_4veGDhTw&usqp=CAU",
+    button: "Book Now",
+  },
+
+  {
+    name: "Niazi Express",
+    location: "Pakistan",
+    city: "Karachi-Lahore-Islamabad",
+    img: "https://thetravellino.com/wp-content/uploads/2023/12/Daewoo-Express-Lahore-Bus-Timings-Ticket-Price-And-Contact-Number.jpg",
+    button: "Book Now",
+  },
+
+  {
+    name: "Flix Bus",
+    location: "Neatherlands",
+    city: "Amsterdam-Rotterdam-Hague",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmQhzLN6a-C9IDLdqFke78bSHuyV-m8UOu4AwoB9BCdQ&s",
+    button: "Book Now",
+
+
+
+
+    
   },
 ];
 
@@ -572,5 +746,30 @@ document.getElementById("searchInput").addEventListener("input", function (event
   var searchTerm = event.target.value.trim();
   filterTransportation(searchTerm);
 });
-
 createTransportationsCards(Transportation);
+document.addEventListener("DOMContentLoaded", function() {
+  renderProfileOrButton();
+});
+
+function renderProfileOrButton() {
+  var profileImage = document.getElementById("profileImage");
+  var profileDiv = document.querySelector(".profile");
+  var loginButton = document.querySelector(".btn");
+
+  var userData = JSON.parse(localStorage.getItem("userData"));
+
+  console.log(userData);
+
+  if (userData) {
+    var savedImage = localStorage.getItem('profileImage');
+    if (savedImage) {
+      profileImage.src = savedImage; 
+    }
+    profileDiv.style.display = "flex";
+    loginButton.style.display = "none";
+  } else {
+    profileDiv.style.display = "none";
+    loginButton.style.display = "flex";
+  }
+}
+
