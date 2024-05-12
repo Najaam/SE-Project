@@ -1,3 +1,8 @@
+function toExcursion(){
+  window.location.href = "../Pages/excursion.html";
+}
+
+
 function setstate(id) {
   var a = document.querySelector("#CurrencyConverter");
   var b = document.querySelector(".searchbar");
