@@ -21,11 +21,12 @@ nav {
   height: 100px;
   width: 100px;
 
-  /* position: fixed; */
   margin-bottom: 50px;
   transition: scale 0.5s ease;
 }
-
+.section{
+    transition: display 0.3s ease-in-out; 
+}
 .logo:hover {
   scale: 1.2;
 }
@@ -66,6 +67,9 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease-in, color 0.3s ease-in,
     transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .signup button:hover {
   background-color: #bbe2ec;
@@ -177,7 +181,6 @@ nav {
   background-color: #bbe2ec;
   color: #000;
 }
-/* Custom scroll bar*/
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -185,10 +188,8 @@ nav {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #dbe7c9, #c7e39e);
+  background:linear-gradient(135deg, #dbe7c9, #c7e39e);
   border-radius: 10px;
   border: 1px solid #ccc;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
