@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../Css/excursion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
 </head>
+
 <body>
     <div class="main">
         <div class="sidebar">
             <div class="head">
                 <img onclick="animatesidebar()" src="../assests/menu.png" alt="" sizes="" srcset="">
                 <h1 class="headtext">Excursion</h1>
-             
+
+
             </div>
+
+
+
             <div class="sidebar-content">
                 <div class="content">
                     <div class="subcontent-img">
-                        <img  src="../assests/all.png" alt="">
+                        <img src="../assests/all.png" alt="">
                         <p class="data">Inclusive</p>
                     </div>
                     <hr class="rounded">
@@ -37,7 +43,7 @@
                 <div class="content">
                     <div class="subcontent-img">
                         <img src="../assests/car-rent.png" alt="">
-                        <p class="data">Car Rental</p> 
+                        <p class="data">Car Rental</p>
                     </div>
                     <hr class="rounded">
                 </div>
@@ -47,7 +53,7 @@
                         <p class="data">Flight Reservation</p>
                     </div>
                     <hr class="rounded">
-                    
+
                 </div>
                 <div class="content">
                     <div class="subcontent-img">
@@ -71,9 +77,344 @@
             </div>
 
         </div>
-    </div>
+        <div class="body">
+            <div class="navbar">
+                <div class="navlink">
 
+                    <p class="headtext">Voyage Timeline</p>
+                    <p class="headtext">Lodging arrangement</p>
+                    <p class="headtext">Moving means</p>
+                    <p class="headtext">Charge Calculation</p>
+                </div>
+            </div>
+            <div class="mainbody">
+                <div class="text">
+                    <p> <span>Take off with us into</span> new adventure!</p>
+                    <p>Fly with us<span> Discover the World!</span> </p>
+                    <div class="booking">
+                        <select id="mean" onchange="selectTransportation(this.value)">
+                            <option disabled selected value="">Select an option</option>
+                            <option value="car">Car Reservation</option>
+                            <option value="bus">Bus Reservation</option>
+                            <option value="train">Train Reservation</option>
+                            <option value="flight">Flight Reservation</option>
+                        </select>
+                        <div class="flight">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>From</p>
+                                            <img src="../assests/take-offe.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>TO</p>
+                                            <img src="../assests/landing.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Date</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Airline</p>
+                                            <img class="card-img" src="../assests/airline.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Time</p>
+                                            <img class="card-img" src="../assests/clock.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="bus">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>From</p>
+                                            <img src="../assests/take-offe.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>TO</p>
+                                            <img src="../assests/landing.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Date</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Transporter</p>
+                                            <img class="card-img" src="../assests/airline.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Time</p>
+                                            <img class="card-img" src="../assests/clock.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="car">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>From</p>
+                                            <img src="../assests/take-offe.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>TO</p>
+                                            <img src="../assests/landing.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Date</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Company</p>
+                                            <img class="card-img" src="../assests/airline.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Time</p>
+                                            <img class="card-img" src="../assests/clock.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="train">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>From</p>
+                                            <img src="../assests/take-offe.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>TO</p>
+                                            <img src="../assests/landing.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Date</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Name</p>
+                                            <img class="card-img" src="../assests/airline.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Time</p>
+                                            <img class="card-img" src="../assests/clock.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button>Next</button>
+                        </div>
+                    </div>
+                </div>
 </body>
+
 </html>
 
 <script src="../Js/excursion.js"></script>
