@@ -28,3 +28,34 @@ const animatesidebar = (() => {
         }
     };
 })();
+
+const selectTransportation = (selectedValue) => {
+    console.log("Selected value:", selectedValue);
+    var flight = document.querySelector(".flight");
+    var bus = document.querySelector(".bus")
+    var train = document.querySelector(".train")
+    var car = document.querySelector(".car")
+    if(selectedValue == "flight"){
+        flight.style.display = "flex";
+        bus.style.display = "none";
+        train.style.display = "none";
+        car.style.display = "none";
+    }else if (selectedValue == "bus") {
+        flight.style.display = "none";
+        bus.style.display = "flex";
+        train.style.display = "none";
+        car.style.display = "none";
+        
+    }else if (selectedValue == "train") {
+        bus.style.display = "none";
+        flight.style.display = "none";
+        train.style.display = "flex";
+        car.style.display = "none";
+        
+    }else if (selectedValue == "car") {
+        bus.style.display = "none";
+        flight.style.display = "none";    
+        train.style.display = "none";
+        car.style.display = "flex";
+    }
+}

@@ -5,8 +5,9 @@
     height: 100%;
     width: 100%;  
     font-family: "poppins";  
-
-}
+    
+  }
+ 
 .sidebar {
   transition: width 0.3s linear; 
 }
@@ -15,6 +16,26 @@
   display: flex ;
   flex-direction: row;
   justify-content: space-between ;
+}
+.navbar{
+  height: 85px;
+  background-color: #dbe7c9;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navlink{
+  height: 70px;
+  background-color: #dbe7c9;
+ display: flex;
+width: 50%;
+gap: 45px;
+}
+.navbar p{
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
 
 }
 .main{
@@ -111,9 +132,110 @@ width: 300px;
     border-radius: 10px;
   }
 
+ .mainbody{
+  width: 100%;
+  height: 84.5%;
+  background-image: url(../assests/trip3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .text{
+  height: 20px;
+  font-size: 170%;
+  font-weight: 900px;
+  margin-left: 10%;
+  margin-bottom: 38%;
+ } 
+ .text span{
+  color:#B5C18E;
+ }
+ .text p{
+  margin-top: 10px;
+  color: #fbf9f1;
+ }
+ .booking{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+ }
+ .booking select{
+  width: 20%;
+  height: 40px;
+  padding: 5px;
+ }
+ .flight{
+   display: none;
+   width: 100%;
+ }
+ .bus{
+   display: none;
+   width: 100%;
+ }
+ .card{
+  margin-top: 20px;
+  height: 120px;
+  width: 80%;
+}
+.card-content{
+  display: flex;
+  width: 100%;
+  }
+.card-text{
+  display: flex;
+  width: 200px;
+}
+.card-text p{
+  color: #B5C18E;
+  margin: 25px 0px 0px 25px;
+  font-weight: 600;
+}
+.card-text img{
+  margin-right: 150px;
+  height: 50px;
+  width:  60px;
+}
+.section{
+  height: 80px;
+}
+.section select{
+width: 200px;
+}
+.section input{
+  height: 35px;
+  width: 200px;
   
-
-
-
+}
+.car{
+  display: none;
+  width: 100%;
+}
+.train{
+  display: none;
+  width: 100%;
+}
+.btn{
+  margin-top: 220px;
+  margin-left: 650px;
+  width: 80px;
+}
+.btn button{
+  font-weight: 600;
+  padding: 5px;
+  height: 30px;
+ background-color: #40a2e3;
+ color: #fff;
+ border: 1px solid #000;
+ border-radius: 5px;
+ transition: all 0.3s ease-in-out;
+}
+.btn button:hover {
+  background-color: #bbe2ec;
+  color: #000;
+  transform: translateY(-5px);
+}
 
