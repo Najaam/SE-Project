@@ -59,3 +59,25 @@ const selectTransportation = (selectedValue) => {
         car.style.display = "flex";
     }
 }
+
+
+const state = (() => {
+    var count = 0;
+    return function (){
+        var voyage = document.querySelector(".voyage");
+        var lodging = document.querySelector(".lodging-arrangment");
+        count++;
+        console.log(count);
+        if (count === 0) {
+            
+            voyage.style.display = "flex";
+            lodging.style.display = "none";
+    
+        } else if(count === 1){
+            voyage.style.display = "none";
+            lodging.style.display = "flex";
+    
+        }
+
+    }
+})();
