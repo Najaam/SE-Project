@@ -16,6 +16,8 @@
   display: flex ;
   flex-direction: row;
   justify-content: space-between ;
+  
+
 }
 .navbar{
   height: 85px;
@@ -36,6 +38,8 @@ gap: 45px;
   font-size: 20px;
   font-weight: 600;
   color: #000;
+  border-radius: 10px;
+  padding: 2px;
 
 }
 .headtext1{
@@ -141,21 +145,19 @@ width: 300px;
  .mainbody{
   width: 100%;
   height: 84.5%;
-  background-image: url(../assests/trip3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assests/trip.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
- }
+}
  .text{
   height: 20px;
   font-size: 170%;
   font-weight: 900px;
   margin-left: 10%;
-  margin-bottom: 38%;
  } 
  .text span{
   color:#B5C18E;
@@ -225,7 +227,7 @@ width: 200px;
   width: 100%;
 }
 .btn{
-  margin-top: 220px;
+  margin-top: 250px;
   margin-left: 750px;
   width: 80px;
 }
@@ -247,12 +249,13 @@ width: 200px;
 .seats input{
   width: 20px;
 }
-.vayage{
-  display: flex;
-}
-.lodging-arrangment{
+
+#lodgeing{
   display: none;
 }
-.mainbodi{
-  background-color: #000;
+#moving{
+  display: none;
+}
+#calculation{
+  display: none;
 }
