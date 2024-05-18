@@ -61,23 +61,34 @@ const selectTransportation = (selectedValue) => {
 }
 
 
-const state = (() => {
-    var count = 0;
-    return function (){
-        var voyage = document.querySelector(".voyage");
-        var lodging = document.querySelector(".lodging-arrangment");
-        count++;
-        console.log(count);
-        if (count === 0) {
-            
-            voyage.style.display = "flex";
-            lodging.style.display = "none";
-    
-        } else if(count === 1){
-            voyage.style.display = "none";
-            lodging.style.display = "flex";
-    
-        }
+var count = 0;
 
+const state = () => {
+    var voyage = document.querySelector("#voyage");
+    var lodgeing = document.querySelector("#lodgeing");
+    var moving = document.querySelector("#moving");
+    var calculation = document.querySelector("#calculation");
+    var headtext1 = document.querySelector(".headtext1");
+    var headtext2 = document.querySelector(".headtext2");
+    var headtext3 = document.querySelector(".headtext3");
+    var headtext4 = document.querySelector(".headtext4");
+
+    if (count === 0) {
+        voyage.style.display = "none";
+        lodgeing.style.display = "flex";
+        headtext1.style.backgroundColor = "#dbe7c9";
+        headtext2.style.backgroundColor = "#c7e39e";
+    } else if (count === 1) {
+        lodgeing.style.display = "none";
+        moving.style.display = "flex";
+        headtext2.style.backgroundColor = "#dbe7c9";
+        headtext3.style.backgroundColor = "#c7e39e";
+    } else if (count === 2) {
+        moving.style.display = "none";
+        calculation.style.display = "flex";
+        headtext3.style.backgroundColor = "#dbe7c9";
+        headtext4.style.backgroundColor = "#c7e39e";
     }
-})();
+
+    count++;
+}
