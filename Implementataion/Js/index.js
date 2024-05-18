@@ -1,6 +1,9 @@
 function toExcursion(){
   window.location.href = "../Pages/excursion.html";
 }
+function toContact(){
+  window.location.href = "../Pages/contact.html";
+}
 
 
 function setstate(id) {
@@ -84,37 +87,37 @@ function setstate(id) {
   });
 }
 
-// slideshow animation
-let slideIndex = 1;
-showSlides(slideIndex);
+// // slideshow animation
+// let slideIndex = 1;
+// showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
+// function plusSlides(n) {
+//   showSlides((slideIndex += n));
+// }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+// function currentSlide(n) {
+//   showSlides((slideIndex = n));
+// }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {
+//     slideIndex = 1;
+//   }
+//   if (n < 1) {
+//     slideIndex = slides.length;
+//   }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
 
-  slides[slideIndex - 1].style.display = "block";
-}
-setInterval(function () {
-  plusSlides(1);
-}, 4000);
+//   slides[slideIndex - 1].style.display = "block";
+// }
+// setInterval(function () {
+//   plusSlides(1);
+// }, 4000);
 var hotels = [
   {
     name: "Mehran Hotel",
