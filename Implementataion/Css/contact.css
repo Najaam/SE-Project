@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:poppins;
+}
+
+
+
+body {
+    background-color: #fbf9f1;
+  }
+.contact{
+    height: 100%;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 27px;
+   
+   /* justify-content: center; */
+
+}
+.info {
+height: 100%;
+width:100%;
+margin-left: 120px;
+margin-top: 100px;
+display: flex;
+
+}
+
+.info1 {
+    width: 320px;
+    border-right: 1px solid black ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 200px;
+    background-image: url();
+
+   
+
+}
+.info1 p{
+margin-left: 50px;
+
+
+}
+
+.phone img{
+height: 40px;
+margin-bottom: 40px;
+
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: -20px;
+}
+.phone p{
+    margin-left: 0px;
+    /* margin-right:200px; */
+}
+.gmail img{
+    height: 30px;
+    margin-bottom: 40px;
+}
+
+.gmail {
+display: flex;
+flex-direction: row;
+margin-top: 0px;
+margin-bottom: -10px;
+width: 50px;        
+}
+
+.gmail p{
+        margin-left: 10px;
+}
+
+.contact-card{
+     margin-top: 20px;
+        width: 80%;
+        height: 450px;
+        background-color: #fff;
+        display: flex;
+
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px #b4b4b8;
+        border-color: black;
+        background-color: #dbe7c9;
+       
+       
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+height: 300px;
+    margin-top: -85px;
+
+    }
+
+    .element{
+        display: flex;
+        flex-direction: row;
+        
+       
+    }
+    .sub-element {
+        margin-left: 25px;
+        margin-top: 20px;
+       
+    }
+    .sub-element input{
+      font-size:16px;
+      width: 220px;
+    
+      margin-top: 5px;
+      padding: 5px;
+
+    }
+   
+    .Message textarea{
+            width: 85%;
+            height: 150%;
+            margin-left: 28px;
+            font-size:16px;
+    }
+   
+     .Message p{
+        margin-left: 30px;
+         margin-top: 20px;
+       
+     }
+   
+    .button button{
+
+        margin-left: 450px;
+        padding: 5px ;
+       margin-top: 115px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #40a2e3;
+        border: 1px solid #000000;
+        color: #fff;
+        transition: all 0.3s ease-in;
+    }
+    .button button:hover{
+        background-color: #bbe2ec;
+        color: #000;
+        transform: translateY(-5px);
+
+
+    }
