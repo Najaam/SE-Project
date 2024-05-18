@@ -92,3 +92,107 @@ const state = () => {
 
     count++;
 }
+
+// select box work
+document.addEventListener("DOMContentLoaded", function() {
+    const flights = [
+        'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix',
+        'Atlanta', 'San Francisco', 'Miami', 'Dallas', 'Seattle',
+        'Denver', 'Las Vegas', 'Orlando', 'Boston', 'Washington D.C.',
+        'London', 'Paris', 'Tokyo', 'Hong Kong', 'Dubai',
+        'Frankfurt', 'Singapore', 'Sydney', 'Toronto', 'Vancouver',
+        'Amsterdam', 'Madrid', 'Rome', 'Beijing', 'Shanghai',
+        'Moscow', 'Istanbul', 'Bangkok', 'Seoul', 'Mexico City',
+        'Sao Paulo', 'Buenos Aires', 'Johannesburg', 'Cairo', 'Mumbai',
+        'Delhi', 'Bangkok', 'Kuala Lumpur', 'Jakarta', 'Lima',
+        'Rio de Janeiro', 'Cape Town', 'Melbourne', 'Auckland', 'Honolulu'
+    ];
+
+    const routesToAirlines = {
+        'New York-London': {
+            'British Airways': { fare: 500, timing: ['9:00 AM', '11:00 AM'] },
+            'American Airlines': { fare: 550, timing: ['10:30 AM', '11:30 AM'] },
+            'Virgin Atlantic': { fare: 520, timing: ['11:45 AM'] }
+        },
+        // Add more routes and their respective airlines, fares, and timings here
+    };
+
+    const selectFrom = document.querySelector('#selectfrom');
+    const selectTo = document.querySelector('#selectto');
+    const selectAirline = document.querySelector('#selectairline');
+    const selectTiming = document.querySelector('#flight-time');
+    const fareInfo = document.querySelector('#fare-info');
+    const fare = document.querySelector('#fare');
+    let originalFare = 0;
+
+    function populateSelectBox(selectBox, options, excludeValue = null) {
+        while (selectBox.options.length > 1) {
+            selectBox.remove(1);
+        }
+        // Populate select box with new options
+        options.forEach(option => {
+            // Skip adding the excluded value if provided
+            if (option !== excludeValue) {
+                const optionElement = document.createElement('option');
+                optionElement.value = option;
+                optionElement.textContent = option;
+                selectBox.appendChild(optionElement);
+            }
+        });
+    }
+
+    function updateAirlineList() {
+        const selectedFrom = selectFrom.value;
+        const selectedTo = selectTo.value;
+        const route = `${selectedFrom}-${selectedTo}`;
+
+        const airlines = routesToAirlines[route] ? Object.keys(routesToAirlines[route]) : [];
+        populateSelectBox(selectAirline, ['Select airline', ...airlines]);
+    }
+    function updateTimingList() {
+        const selectedFrom = selectFrom.value;
+        const selectedTo = selectTo.value;
+        const selectedAirline = selectAirline.value;
+        const route = `${selectedFrom}-${selectedTo}`;
+    
+        if (routesToAirlines[route] && routesToAirlines[route][selectedAirline]) {
+            const fareValue = routesToAirlines[route][selectedAirline].fare;
+            originalFare = parseInt(fareValue); 
+            fare.textContent = fareValue; 
+            const timings = routesToAirlines[route][selectedAirline].timing;
+            populateSelectBox(selectTiming, ['Select timing', ...timings]);
+        } else {
+            populateSelectBox(selectTiming, ['Select timing']);
+            fare.textContent = 'N/A';
+        }
+    }
+
+    function updateOptions() {
+        const selectedFrom = selectFrom.value;
+        const selectedTo = selectTo.value;
+
+        
+        populateSelectBox(selectTo, flights, selectedFrom);
+        selectFrom.value = selectedFrom;
+            selectTo.value = selectedTo;
+        updateAirlineList();
+        populateSelectBox(selectTiming, ['Select timing']);
+        fare.textContent = 'N/A';
+    }
+
+    selectFrom.addEventListener('change', updateOptions);
+    selectTo.addEventListener('change', updateOptions);
+    selectAirline.addEventListener('change', updateTimingList);
+
+    // Populate both select boxes initially
+    populateSelectBox(selectFrom, flights);
+    populateSelectBox(selectTo, flights);
+
+    function updateFare() {
+        const numSeats = parseInt(document.getElementById('seats').value);
+        const totalFare = originalFare * numSeats;
+        fare.textContent = `Total Fare: ${totalFare}`;
+    }
+    
+    document.getElementById('seats').addEventListener('input', updateFare);
+});
