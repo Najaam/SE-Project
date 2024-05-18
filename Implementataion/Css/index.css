@@ -17,6 +17,207 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+.animated-cards{
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  gap: 30px;
+}
+.cards{
+  height: 200px;
+  width: 100px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url('../assests/maldives.jpg');
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+.cards:hover {
+  width: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('../assests/maldives.jpg');  
+  background-size: cover;
+  background-position: center;
+}
+.cards1{
+  height: 200px;
+  width: 100px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url('../assests/maldives.jpg');
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+.cards1:hover {
+  width: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('../assests/maldives.jpg');  
+  background-size: cover;
+  background-position: center;
+}
+.cards2{
+  height: 200px;
+  width: 100px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url('../assests/maldives.jpg');
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+.cards2:hover {
+  width: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('../assests/maldives.jpg');  
+  background-size: cover;
+  background-position: center;
+}
+.cards3{
+  height: 200px;
+  width: 100px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url('../assests/maldives.jpg');
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+.cards3:hover {
+  width: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('../assests/maldives.jpg');  
+  background-size: cover;
+  background-position: center;
+}
+
+.cards4{
+  height: 200px;
+  width: 100px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url('../assests/maldives.jpg');
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+.cards4:hover {
+  width: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('../assests/maldives.jpg');  
+  background-size: cover;
+  background-position: center;
+}
+
+.cards5{
+  height: 200px;
+  width: 100px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url('../assests/maldives.jpg');
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+.cards5:hover {
+  width: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('../assests/maldives.jpg');  
+  background-size: cover;
+  background-position: center;
+}
+.cards6{
+  height: 200px;
+  width: 100px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url('../assests/maldives.jpg');
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+.cards6:hover {
+  width: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('../assests/maldives.jpg');  
+  background-size: cover;
+  background-position: center;
+}
+.cards7 {
+  height: 200px;
+  width: 100px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url('../assests/maldives.jpg');
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+.cards7:hover {
+  width: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('../assests/maldives.jpg');  
+  background-size: cover;
+  background-position: center;
+}
+
+
+.cardcontent {
+  display: flex;
+  margin-top: 160px;
+  margin-left: 10px;
+}
+
+.cardcontent img {
+  height: 25px;
+  width: 25px;
+}
+
+.text {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease; 
+}
+
+.cards:hover .text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.cards1:hover .text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.cards2:hover .text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.cards3:hover .text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.cards4:hover .text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.cards5:hover .text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.cards6:hover .text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.cards7:hover .text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.text p{
+  margin-left: 10px;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
 .logo {
   height: 100px;
   width: 100px;
