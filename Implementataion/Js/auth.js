@@ -75,11 +75,7 @@ const login = () => {
 
   if (userData) {
     if (username === userData.username && password === userData.password) {
-        window.location.href = "../index.html";
-        clearlogfields();
-        showAlert("Login successful", y, sucessstyle);
-    } else{
-        clearlogfields();
+        
         showAlert("Invalid username or password.", x, failstyle);
     }
   } else {
