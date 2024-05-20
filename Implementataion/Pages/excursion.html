@@ -53,7 +53,7 @@
                     <div class="subcontent-img">
                         <img src="../assests/book.png" alt="">
                         <p class="data">Bus Reservation</p>
-                    </div>
+                    </div> 
                     <hr class="rounded">
                 </div>
                 <div class="content">
@@ -74,11 +74,19 @@
                     <p class="headtext4">Charge Calculation</p>
                 </div>
             </div>
-
             <div id="voyage" class="mainbody">
                 <div class="text">
+                <div class="subdiv">
+
                     <p> <span>Take off with us into</span> new adventure!</p>
                     <p>Fly with us<span> Discover the World!</span> </p>
+                    <div class="sub-bill">
+<p class="f1">Fare : </p>
+
+
+                        <p id="fare">0</p>
+                    </div>
+                </div>
                     <div class="booking">
                         <select id="mean" onchange="selectTransportation(this.value)">
                             <option disabled selected value="">Select an option</option>
@@ -87,6 +95,7 @@
                             <option value="train">Train Reservation</option>
                             <option value="flight">Flight Reservation</option>
                         </select>
+      
                         <div class="flight">
                             <div class="card">
                                 <div class="card-content">
@@ -137,11 +146,10 @@
                                     <div class="section">
                                         <div class="card-text">
                                             <p>Seats</p>
-                                            <img class="card-img" src="../assests/airline.png"
+                                            <img class="card-img" src="../assests/seat.png"
                                                 style="height: 35px; width: 35px;">
                                         </div>
                                         <input id="seats" type="number" placeholder="Enter number of seats" min="0" value="1" inputmode="numeric">
-
                                     </div>
 
                                     <div class="section">
@@ -251,7 +259,7 @@
 
                                         <div class="card-text">
                                             <p>From</p>
-                                            <img src="../assests/take-offe.png" alt="">
+                                            <img src="../assests/car-rent.png" alt="">
                                         </div>
                                         <select id="mean" onchange="selectTransportation(this.value)">
                                             <option disabled selected value="">Select an option</option>
@@ -265,7 +273,7 @@
 
                                         <div class="card-text">
                                             <p>TO</p>
-                                            <img src="../assests/landing.png" alt="">
+                                            <img src="../assests/cardrop.png" alt="">
                                         </div>
                                         <select id="mean" onchange="selectTransportation(this.value)">
                                             <option disabled selected value="">Select an option</option>
@@ -415,7 +423,77 @@
             </div>
             <div id="lodgeing" class="mainbody">
                 <div class="text">
-                    <h1>lodgeing</h1>
+                    <p>Find the Best and Most Affordable Hotel <br> <span>Across the World!</span> </p>
+                    <div class="booking"> 
+
+      
+                        <div class="hotles">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>City</p>
+                                            <img src="../assests/take-offe.png" alt="">
+                                        </div>
+                                        <select id="selectfrom" onchange="">
+                                            <option disabled selected value="">Select city</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Hotel</p>
+                                            <img src="../assests/landing.png" alt="">
+                                        </div>
+                                        <select id="selectto" onchange="">
+                                            <option disabled selected value="">Select Hotel</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Enter</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Leave</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>Rooms</p>
+                                            <img class="card-img" src="../assests/airline.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <input id="seats" type="number" placeholder="Enter number of Rooms" min="0" value="1" inputmode="numeric">
+                                    </div>
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>Persons</p>
+                                            <img class="card-img" src="../assests/airline.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <input id="seats" type="number" placeholder="Enter number of Persons" min="0" value="1" inputmode="numeric">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+  
                     <div class="btn">
                         <button id="nextBtn" onclick="state()">Next</button>
                     </div>
