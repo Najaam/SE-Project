@@ -44,7 +44,7 @@ transition: all 0.3s ease;
   height: 200px;
   width: 100px;
 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url('../assests/maldives.jpg');
+url('../assests/dubai.jpg');
 background-size: cover;
 background-position: center;
 border-radius: 20px;
@@ -53,7 +53,7 @@ transition: all 0.3s ease;
 .cards1:hover {
   width: 300px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  url('../assests/maldives.jpg');  
+  url('../assests/dubai.jpg');  
   background-size: cover;
   background-position: center;
 }
@@ -61,7 +61,7 @@ transition: all 0.3s ease;
   height: 200px;
   width: 100px;
 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url('../assests/maldives.jpg');
+url('../assests/italy.jpg');
 background-size: cover;
 background-position: center;
 border-radius: 20px;
@@ -70,7 +70,7 @@ transition: all 0.3s ease;
 .cards2:hover {
   width: 300px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  url('../assests/maldives.jpg');  
+  url('../assests/italy.jpg');  
   background-size: cover;
   background-position: center;
 }
@@ -78,7 +78,7 @@ transition: all 0.3s ease;
   height: 200px;
   width: 100px;
 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url('../assests/maldives.jpg');
+url('../assests/thai.jpg');
 background-size: cover;
 background-position: center;
 border-radius: 20px;
@@ -87,7 +87,7 @@ transition: all 0.3s ease;
 .cards3:hover {
   width: 300px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  url('../assests/maldives.jpg');  
+  url('../assests/thai.jpg');  
   background-size: cover;
   background-position: center;
 }
@@ -96,7 +96,7 @@ transition: all 0.3s ease;
   height: 200px;
   width: 100px;
 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url('../assests/maldives.jpg');
+url('../assests/greece.jpg');
 background-size: cover;
 background-position: center;
 border-radius: 20px;
@@ -105,7 +105,7 @@ transition: all 0.3s ease;
 .cards4:hover {
   width: 300px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  url('../assests/maldives.jpg');  
+  url('../assests/greece.jpg');  
   background-size: cover;
   background-position: center;
 }
@@ -114,7 +114,7 @@ transition: all 0.3s ease;
   height: 200px;
   width: 100px;
 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url('../assests/maldives.jpg');
+url('../assests/greenland.jpg');
 background-size: cover;
 background-position: center;
 border-radius: 20px;
@@ -123,7 +123,7 @@ transition: all 0.3s ease;
 .cards5:hover {
   width: 300px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  url('../assests/maldives.jpg');  
+  url('../assests/greenland.jpg');  
   background-size: cover;
   background-position: center;
 }
@@ -131,7 +131,7 @@ transition: all 0.3s ease;
   height: 200px;
   width: 100px;
 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url('../assests/maldives.jpg');
+url('../assests/victoriafalls.jpg');
 background-size: cover;
 background-position: center;
 border-radius: 20px;
@@ -140,7 +140,7 @@ transition: all 0.3s ease;
 .cards6:hover {
   width: 300px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  url('../assests/maldives.jpg');  
+  url('../assests/victoriafalls.jpg');  
   background-size: cover;
   background-position: center;
 }
@@ -148,7 +148,7 @@ transition: all 0.3s ease;
   height: 200px;
   width: 100px;
 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url('../assests/maldives.jpg');
+url('../assests/niagrafalls.jpg');
 background-size: cover;
 background-position: center;
 border-radius: 20px;
@@ -157,7 +157,7 @@ transition: all 0.3s ease;
 .cards7:hover {
   width: 300px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  url('../assests/maldives.jpg');  
+  url('../assests/niagrafalls.jpg');  
   background-size: cover;
   background-position: center;
 }
@@ -178,6 +178,7 @@ transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(100%);
   transition: all 0.3s ease; 
+  color:#fff ;
 }
 
 .cards:hover .text {
