@@ -14,6 +14,10 @@
 </head>
 
 <body>
+    <div class="alert">
+        <img src="../assests/boy.png" />
+        <p class="alerttext"></p>
+      </div>
     <div class="main">
         <div class="sidebar">
             <div class="head">
@@ -22,44 +26,44 @@
             </div>
             <div class="sidebar-content">
                 <div class="content">
-                    <div class="subcontent-img">
+                    <div class="subcontent-img" onclick="sidebarstate('inclusive')">
                         <img src="../assests/all.png" alt="">
-                        <p class="data">Inclusive</p>
+                        <p class="data" id="inclusive" >Inclusive</p>
                     </div>
                     <hr class="rounded">
                 </div>
                 <div class="content">
-                    <div class="subcontent-img">
+                    <div class="subcontent-img" onclick="sidebarstate('lodge')">
                         <img src="../assests/lodge.png" alt="">
-                        <p class="data">Lodging arrangement</p>
+                        <p class="data" id="lodge">Lodging arrangement</p>
                     </div>
                     <hr class="rounded">
                 </div>
                 <div class="content">
-                    <div class="subcontent-img">
+                 <div class="subcontent-img" onclick="sidebarstate('car')">
                         <img src="../assests/car-rent.png" alt="">
-                        <p class="data">Car Rental</p>
+                        <p class="data" id="car">Car Rental</p>
                     </div>
                     <hr class="rounded">
                 </div>
                 <div class="content">
-                    <div class="subcontent-img">
+                    <div class="subcontent-img" onclick="sidebarstate('flight')">
                         <img src="../assests/direct-flight.png" alt="">
-                        <p class="data">Flight Reservation</p>
+                        <p class="data" id="flight">Flight Reservation</p>
                     </div>
                     <hr class="rounded">
                 </div>
                 <div class="content">
-                    <div class="subcontent-img">
+                    <div class="subcontent-img" onclick="sidebarstate('bus')">
                         <img src="../assests/book.png" alt="">
-                        <p class="data">Bus Reservation</p>
+                        <p class="data" id="bus">Bus Reservation</p>
                     </div> 
                     <hr class="rounded">
                 </div>
                 <div class="content">
-                    <div class="subcontent-img">
+                    <div class="subcontent-img" onclick="sidebarstate('train')">
                         <img src="../assests/train.png" alt="">
-                        <p class="data">Railway Reservation</p>
+                        <p class="data" id="train">Railway Reservation</p>
                     </div>
                     <hr class="rounded">
                 </div>
@@ -70,10 +74,10 @@
                 <div class="navlink">
                     <p class="headtext1">Voyage Timeline</p>
                     <p class="headtext2">Lodging arrangement</p>
-                    <p class="headtext3">Moving means</p>
                     <p class="headtext4">Charge Calculation</p>
                 </div>
             </div>
+            <div id="inclusive-container">
             <div id="voyage" class="mainbody">
                 <div class="text">
                 <div class="subdiv">
@@ -81,10 +85,15 @@
                     <p> <span>Take off with us into</span> new adventure!</p>
                     <p>Fly with us<span> Discover the World!</span> </p>
                     <div class="sub-bill">
-<p class="f1">Fare : </p>
-
-
-                        <p id="fare">0</p>
+                        <div class="sub-content">
+                            <p class="f1">Fare : </p>
+                            <p id="fare">0</p>
+                        </div>
+                        <div class="sub-content">
+                            <p class="f1">Rent : </p>
+                            <p id="Rent" class>0</p>
+                        </div>
+                        <button>Pay now</button>
                     </div>
                 </div>
                     <div class="booking">
@@ -423,37 +432,43 @@
             </div>
             <div id="lodgeing" class="mainbody">
                 <div class="text">
-                    <p>Find the Best and Most Affordable Hotel <br> <span>Across the World!</span> </p>
+                    <div class="subdiv">
+                             <p>Find the Best and Most Affordable <br> Hotel  <span>Across the World!</span> </p>                        
+                        <div class="sub-bill">
+                            <div class="sub-content">
+                                <p class="f1">Fare : </p>
+                                <p id="fare">0</p>
+                            </div>
+                            <div class="sub-content">
+                                <p class="f1">Rent : </p>
+                                <p id="Rent" class>0</p>
+                            </div>
+                            <button class="sub-btn" >Pay now</button>
+                        </div>
+                    </div>
                     <div class="booking"> 
-
-      
                         <div class="hotles">
                             <div class="card">
                                 <div class="card-content">
                                     <div class="section">
-
                                         <div class="card-text">
                                             <p>City</p>
                                             <img src="../assests/take-offe.png" alt="">
                                         </div>
                                         <select id="selectfrom" onchange="">
                                             <option disabled selected value="">Select city</option>
-
                                         </select>
                                     </div>
                                     <div class="section">
-
                                         <div class="card-text">
                                             <p>Hotel</p>
                                             <img src="../assests/landing.png" alt="">
                                         </div>
                                         <select id="selectto" onchange="">
                                             <option disabled selected value="">Select Hotel</option>
-
                                         </select>
                                     </div>
                                     <div class="section">
-
                                         <div class="card-text">
                                             <p>Enter</p>
                                             <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
@@ -464,7 +479,6 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="section">
-
                                         <div class="card-text">
                                             <p>Leave</p>
                                             <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
@@ -476,7 +490,7 @@
                                         <div class="card-text">
                                             <p>Rooms</p>
                                             <img class="card-img" src="../assests/airline.png"
-                                                style="height: 35px; width: 35px;">
+                                            style="height: 35px; width: 35px;">
                                         </div>
                                         <input id="seats" type="number" placeholder="Enter number of Rooms" min="0" value="1" inputmode="numeric">
                                     </div>
@@ -489,35 +503,76 @@
                                         <input id="seats" type="number" placeholder="Enter number of Persons" min="0" value="1" inputmode="numeric">
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-  
                     <div class="btn">
                         <button id="nextBtn" onclick="state()">Next</button>
                     </div>
                 </div>
             </div>
-
-            <div id="moving" class="mainbody">
-                <div class="text">
-                    <h1>moving means</h1>
-                    <div class="btn">
-                        <button id="nextBtn" onclick="state()">Next</button>
-                    </div>
-                </div>
-            </div>
-
             <div id="calculation" class="mainbody">
-                <div class="text">
-                    <h1>Calculation Charge</h1>
-                    <div class="btn">
-                        <button id="nextBtn" onclick="state()">Next</button>
+               <div class="card">
+
+                   <div class="text">
+                       
+                       <div class="name">
+                        <h3>PAYMENT DETAILS</h3>
+                           <p>Name on card</p>
+                           <input type="text">
+                        </div>
+                        <div class="num">
+                            <div class="subnum">
+                                <p>Card Number</p>
+                                <input class=" cn" type="text">
+                            </div>
+                            
+                            <div class="subnum">
+                                <p>CVV</p>
+                                <input class="cvv" type="text">
+                            </div>
+                            
+                            <div class="subnum">
+                                <p>Expiry</p>
+                                <input class="expiry" type="text">
+                            </div>
+                            
+                            </div>
+                            <div class="billing">
+                                <p>Billing Address</p>
+                                <input type="text">
+                        </div>
+                        <div class="state">
+                            <p>State/Province</p>
+                            <input type="text">
+                    </div>
+                    <div class="pay">
+                        <button id="paynow" onclick="state()">Pay Now</button>
+                </div>
+
+
+                    </div>
+                        <div class="btn">
+                            <button id="nextBtn" onclick="state()">Next</button>
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div id="lodge-container">
+<h1>hello lodge</h1>
+        </div>
+        <div id="car-container">
+<h1>hello car</h1>
+        </div>
+        <div id="flight-container">
+<h1>hello flight</h1>
+        </div>
+        <div id="bus-container">
+<h1>hello bus</h1>
+        </div>
+        <div id="train-container">
+<h1>hello train</h1>
+        </div>
 
 </body>
 

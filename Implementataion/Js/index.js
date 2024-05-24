@@ -67,24 +67,6 @@ function setstate(id) {
     b.style.display = "flex";
     c.style.display = "flex";
   }
-
-  document.getElementById("Hotels").addEventListener("click", function () {
-    setstate("hotelContainer");
-  });
-
-  document.getElementById("Places").addEventListener("click", function () {
-    setstate("PlacesContainer");
-  });
-  document.getElementById("Resturants").addEventListener("click", function () {
-    setstate("ResturantsContainer");
-  });
-
-  document.getElementById("Recommand").addEventListener("click", function () {
-    setstate("RecommandationsContainer");
-  });
-  document.getElementById("Transport").addEventListener("click", function () {
-    setstate("TransportationContainer");
-  });
 }
 
 var hotels = [
