@@ -1,3 +1,5 @@
+
+// preventDefault();
 const animatesidebar = (() => {
   var flag = false;
   return function () {
@@ -60,11 +62,9 @@ var count = 0;
 const state = () => {
   var voyage = document.querySelector("#voyage");
   var lodgeing = document.querySelector("#lodgeing");
-  var moving = document.querySelector("#moving");
   var calculation = document.querySelector("#calculation");
   var headtext1 = document.querySelector(".headtext1");
   var headtext2 = document.querySelector(".headtext2");
-  var headtext3 = document.querySelector(".headtext3");
   var headtext4 = document.querySelector(".headtext4");
   if (count === 0) {
     voyage.style.display = "none";
@@ -72,18 +72,75 @@ const state = () => {
     headtext1.style.backgroundColor = "#dbe7c9";
     headtext2.style.backgroundColor = "#c7e39e";
   } else if (count === 1) {
-    lodgeing.style.display = "none";
-    moving.style.display = "flex";
-    headtext2.style.backgroundColor = "#dbe7c9";
-    headtext3.style.backgroundColor = "#c7e39e";
-  } else if (count === 2) {
-    moving.style.display = "none";
     calculation.style.display = "flex";
-    headtext3.style.backgroundColor = "#dbe7c9";
+    lodgeing.style.display = "none";
+    headtext2.style.backgroundColor = "#dbe7c9";
     headtext4.style.backgroundColor = "#c7e39e";
   }
   count++;
 };
+
+function sidebarstate(id) {
+  console.log(id);
+  var t = document.querySelector(".navlink");
+  var u = document.getElementById("inclusive-container");
+  var v = document.getElementById("lodge-container");
+  var w = document.getElementById("car-container");
+  var x = document.getElementById("flight-container");
+  var y = document.getElementById("bus-container");
+  var z = document.getElementById("train-container");
+
+  if (id === "inclusive") {
+    u.style.display = "flex";
+    v.style.display = "none";
+    w.style.display = "none";
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+  } else if (id === "lodge") {
+    t.style.visibility = "hidden";
+    u.style.display = "none";
+    v.style.display = "flex";
+    w.style.display = "none";
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+  } else if (id === "car") {
+    t.style.display = "none"; 
+    u.style.display = "none";
+    v.style.display = "none";
+    w.style.display = "flex";
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+  } else if (id === "flight") {
+    u.style.display = "none";
+    t.style.display = "none"; 
+    v.style.display = "none";
+    w.style.display = "none";
+    x.style.display = "flex";
+    y.style.display = "none";
+    z.style.display = "none";
+  } else if (id === "bus") {
+    t.style.display = "none"; 
+    u.style.display = "none";
+    v.style.display = "none";
+    w.style.display = "none";
+    x.style.display = "none";
+    y.style.display = "flex";
+    z.style.display = "none";
+  } else if (id === "train") {
+    t.style.display = "none"; 
+    u.style.display = "none";
+    v.style.display = "none";
+    w.style.display = "none";
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "flex";
+  }
+}
+
+
 // select box work
 document.addEventListener("DOMContentLoaded", function () {
   const flights = [
@@ -216,3 +273,7 @@ function updateTimingList() {
   }
   document.getElementById("seats").addEventListener("input", updateFare);
 });
+
+ function TEST(params) {
+   console.log('hello btn');
+ }

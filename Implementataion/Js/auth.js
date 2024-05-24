@@ -62,11 +62,8 @@ const saveToLocalStorage = () => {
     showAlert("Please fill all the fields.", x, failstyle);
   }
 };
-document
-  .getElementById("savedata")
-  .addEventListener("click", saveToLocalStorage);
+document .getElementById("savedata").addEventListener("click", saveToLocalStorage);
 
-//Getting data from local storage
 const login = () => {
   const username = document.getElementById("loginuser").value;
   const password = document.getElementById("loginpass").value;
@@ -75,8 +72,9 @@ const login = () => {
 
   if (userData) {
     if (username === userData.username && password === userData.password) {
-        
-        showAlert("Invalid username or password.", x, failstyle);
+      window.location.href = '../../index.html'
+    }else{
+      showAlert("Invalid username or password.", x, failstyle);
     }
   } else {
     showAlert("Fill all feilds.", x, failstyle);

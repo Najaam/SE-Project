@@ -20,7 +20,6 @@ function uploadImage() {
 
   input.click();
 }
-// Check if  image is saved in local storage then display it
 window.onload = function() {
   var savedImage = localStorage.getItem('profileImage');
   if (savedImage) {
@@ -60,17 +59,25 @@ function maskEmail(email) {
   const domainPart = email.substring(atIndex);
   return maskedPart + domainPart;
 }
-
 function unhidePassword() {
   const userData = JSON.parse(localStorage.getItem("userData"));
   var passwordField = document.getElementById("datapass");
   passwordField.textContent = userData.password;
 }
-
 function hidePassword() {
   var passwordField = document.getElementById("datapass");
   passwordField.textContent = "******";
 }
 function logout(){
+  deleteImageFromLocalStorage('profileImage');
   window.location.replace("../Pages/Authform.html");
+
+}
+function deleteImageFromLocalStorage(key) {
+  if (localStorage.getItem(key)) {
+      localStorage.removeItem(key);
+      console.log(`Image with key "${key}" has been removed from local storage.`);
+  } else {
+      console.log(`No image found with key "${key}".`);
+  }
 }
