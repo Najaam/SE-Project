@@ -41,7 +41,7 @@
                 </div>
                 <div class="content">
                  <div class="subcontent-img" onclick="sidebarstate('car')">
-                        <img src="../assests/car-rent.png" alt="">
+                        <img src="../assests/car-rent (1).png" alt="">
                         <p class="data" id="car">Car Rental</p>
                     </div>
                     <hr class="rounded">
@@ -77,24 +77,26 @@
                     <p class="headtext4">Charge Calculation</p>
                 </div>
             </div>
+            <div class="mainbody">
+                <div class="sub-bill">
+                    <div class="sub-content">
+                        <p class="f1">Fare : </p>
+                        <p id="fare">0</p>
+                    </div>
+                    <div class="sub-content">
+                        <p class="f1">Rent : </p>
+                        <p id="Rent" class>0</p>
+                    </div>
+                 
+            </div>
             <div id="inclusive-container">
-            <div id="voyage" class="mainbody">
+            <div id="voyage" >
                 <div class="text">
                 <div class="subdiv">
 
                     <p> <span>Take off with us into</span> new adventure!</p>
                     <p>Fly with us<span> Discover the World!</span> </p>
-                    <div class="sub-bill">
-                        <div class="sub-content">
-                            <p class="f1">Fare : </p>
-                            <p id="fare">0</p>
-                        </div>
-                        <div class="sub-content">
-                            <p class="f1">Rent : </p>
-                            <p id="Rent" class>0</p>
-                        </div>
-                        <button>Pay now</button>
-                    </div>
+                    
                 </div>
                     <div class="booking">
                         <select id="mean" onchange="selectTransportation(this.value)">
@@ -150,7 +152,6 @@
                                         <select id="selectairline" onchange="">
                                             <option disabled selected value="">Select an option</option>
                                         </select>
-                                        <p id="fare">fare</p>
                                     </div>
                                     <div class="section">
                                         <div class="card-text">
@@ -158,7 +159,7 @@
                                             <img class="card-img" src="../assests/seat.png"
                                                 style="height: 35px; width: 35px;">
                                         </div>
-                                        <input id="seats" type="number" placeholder="Enter number of seats" min="0" value="1" inputmode="numeric">
+                                        <input id="seats" type="number" placeholder="Enter number of seats" min="1" value="1" inputmode="numeric">
                                     </div>
 
                                     <div class="section">
@@ -183,28 +184,22 @@
 
                                         <div class="card-text">
                                             <p>From</p>
-                                            <img src="../assests/take-offe.png" alt="">
+                                            <img src="../assests/bus(from).png" alt="">
                                         </div>
-                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                        <select id="selectfrombus" onchange="selectTransportation(this.value)">
                                             <option disabled selected value="">Select an option</option>
-                                            <option value="car">Car Reservation</option>
-                                            <option value="bus">Bus Reservation</option>
-                                            <option value="train">Train Reservation</option>
-                                            <option value="flight">Flight Reservation</option>
+                                         
                                         </select>
                                     </div>
                                     <div class="section">
 
                                         <div class="card-text">
                                             <p>TO</p>
-                                            <img src="../assests/landing.png" alt="">
+                                            <img src="../assests/bus(to).png" alt="">
                                         </div>
-                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                        <select id="selecttobus" onchange="selectTransportation(this.value)">
                                             <option disabled selected value="">Select an option</option>
-                                            <option value="car">Car Reservation</option>
-                                            <option value="bus">Bus Reservation</option>
-                                            <option value="train">Train Reservation</option>
-                                            <option value="flight">Flight Reservation</option>
+                                          
                                         </select>
                                     </div>
                                     <div class="section">
@@ -222,19 +217,19 @@
 
                                         <div class="card-text">
                                             <p>Seats</p>
-                                            <img class="card-img" src="../assests/airline.png"
+                                            <img class="card-img" src="../assests/busseats.png"
                                                 style="height: 35px; width: 35px;">
                                         </div>
-                                        <input type="number" placeholder="Enter number of seats">
+                                        <input id="busseats" type="number" placeholder="Enter number of seats" min="1" value="1" inputmode="numeric">
                                     </div>
                                     <div class="section">
 
                                         <div class="card-text">
-                                            <p>Transporter</p>
-                                            <img class="card-img" src="../assests/airline.png"
+                                            <p>Service</p> 
+                                            <img class="card-img" src="../assests/busservice.png"
                                                 style="height: 35px; width: 35px;">
                                         </div>
-                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                        <select id="busname" onchange="selectTransportation(this.value)">
                                             <option disabled selected value="">Select an option</option>
                                             <option value="car">Car Reservation</option>
                                             <option value="bus">Bus Reservation</option>
@@ -249,7 +244,7 @@
                                             <img class="card-img" src="../assests/clock.png"
                                                 style="height: 35px; width: 35px;">
                                         </div>
-                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                        <select id="bustime" onchange="selectTransportation(this.value)">
                                             <option disabled selected value="">Select an option</option>
                                             <option value="car">Car Reservation</option>
                                             <option value="bus">Bus Reservation</option>
@@ -308,7 +303,7 @@
 
                                         <div class="card-text">
                                             <p>Seats</p>
-                                            <img class="card-img" src="../assests/airline.png"
+                                            <img class="card-img" src="../assests/car-chair.png"
                                                 style="height: 35px; width: 35px;">
                                         </div>
                                         <select id="mean" onchange="selectTransportation(this.value)">
@@ -339,112 +334,75 @@
                             </div>
 
                         </div>
-
                         <div class="train">
                             <div class="card">
-                                <div class="card-content">
-                                    <div class="section">
-
-                                        <div class="card-text">
-                                            <p>From</p>
-                                            <img src="../assests/take-offe.png" alt="">
-                                        </div>
-                                        <select id="mean" onchange="selectTransportation(this.value)">
-                                            <option disabled selected value="">Select an option</option>
-                                            <option value="car">Car Reservation</option>
-                                            <option value="bus">Bus Reservation</option>
-                                            <option value="train">Train Reservation</option>
-                                            <option value="flight">Flight Reservation</option>
-                                        </select>
-                                    </div>
-                                    <div class="section">
-
-                                        <div class="card-text">
-                                            <p>TO</p>
-                                            <img src="../assests/landing.png" alt="">
-                                        </div>
-                                        <select id="mean" onchange="selectTransportation(this.value)">
-                                            <option disabled selected value="">Select an option</option>
-                                            <option value="car">Car Reservation</option>
-                                            <option value="bus">Bus Reservation</option>
-                                            <option value="train">Train Reservation</option>
-                                            <option value="flight">Flight Reservation</option>
-                                        </select>
-                                    </div>
-                                    <div class="section">
-
-                                        <div class="card-text">
-                                            <p>Date</p>
-                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
-                                        </div>
-                                        <input type="date">
-                                        </select>
-                                    </div>
+                              <div class="card-content">
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>From</p>
+                                    <img src="../assests/train(from).png" alt="">
+                                  </div>
+                                  <select id="selectfromtrain">
+                                    <option disabled selected value="">Select an option</option>
+                                  </select>
                                 </div>
-                                <div class="card-content">
-                                    <div class="section">
-
-                                        <div class="card-text">
-                                            <p>Seats</p>
-                                            <img class="card-img" src="../assests/airline.png"
-                                                style="height: 35px; width: 35px;">
-                                        </div>
-                                        <input type="number" placeholder="Enter number of seats">
-                                    </div>
-                                    <div class="section">
-
-                                        <div class="card-text">
-                                            <p>Name</p>
-                                            <img class="card-img" src="../assests/airline.png"
-                                                style="height: 35px; width: 35px;">
-                                        </div>
-                                        <select id="mean" onchange="selectTransportation(this.value)">
-                                            <option disabled selected value="">Select an option</option>
-                                            <option value="car">Car Reservation</option>
-                                            <option value="bus">Bus Reservation</option>
-                                            <option value="train">Train Reservation</option>
-                                            <option value="flight">Flight Reservation</option>
-                                        </select>
-                                    </div>
-                                    <div class="section">
-
-                                        <div class="card-text">
-                                            <p>Time</p>
-                                            <img class="card-img" src="../assests/clock.png"
-                                                style="height: 35px; width: 35px;">
-                                        </div>
-                                        <select id="mean" onchange="selectTransportation(this.value)">
-                                            <option disabled selected value="">Select an option</option>
-                                            <option value="car">Car Reservation</option>
-                                            <option value="bus">Bus Reservation</option>
-                                            <option value="train">Train Reservation</option>
-                                            <option value="flight">Flight Reservation</option>
-                                        </select>
-                                    </div>
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>To</p>
+                                    <img src="../assests/train(to).png " alt="">
+                                  </div>
+                                  <select id="selecttotrain">
+                                    <option disabled selected value="">Select an option</option>
+                                  </select>
                                 </div>
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>Date</p>
+                                    <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                  </div>
+                                  <input type="date">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>Train</p>
+                                    <img class="card-img" src="../assests/trainnn.png">
+                                  </div>
+                                  <select id="selecttrain">
+                                    <option disabled selected value="">Select an option</option>
+                                  </select>
+                                </div>
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>Seats</p>
+                                    <img class="card-img" src="../assests/trainseats.png">
+                                  </div>
+                                  <input id="trainseats" type="number" placeholder="Enter number of seats" min="1" value="1" inputmode="numeric">
+                                </div>
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>Time</p>
+                                    <img class="card-img" src="../assests/clock.png">
+                                  </div>
+                                  <select id="train-time">
+                                    <option disabled selected value="">Select an option</option>
+                                  </select>
+                                </div>
+                              </div>
                             </div>
-                        </div>
+                          </div>
                         <div class="btn">
                             <button id="nextBtn" onclick="state()">Next</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="lodgeing" class="mainbody">
+            <div id="lodgeing" >
                 <div class="text">
                     <div class="subdiv">
                              <p>Find the Best and Most Affordable <br> Hotel  <span>Across the World!</span> </p>                        
-                        <div class="sub-bill">
-                            <div class="sub-content">
-                                <p class="f1">Fare : </p>
-                                <p id="fare">0</p>
-                            </div>
-                            <div class="sub-content">
-                                <p class="f1">Rent : </p>
-                                <p id="Rent" class>0</p>
-                            </div>
-                            <button class="sub-btn" >Pay now</button>
-                        </div>
+                       
                     </div>
                     <div class="booking"> 
                         <div class="hotles">
@@ -453,18 +411,18 @@
                                     <div class="section">
                                         <div class="card-text">
                                             <p>City</p>
-                                            <img src="../assests/take-offe.png" alt="">
+                                            <img src="../assests/city.png" alt="">
                                         </div>
-                                        <select id="selectfrom" onchange="">
+                                        <select id="selectcity" onchange="">
                                             <option disabled selected value="">Select city</option>
                                         </select>
                                     </div>
                                     <div class="section">
                                         <div class="card-text">
                                             <p>Hotel</p>
-                                            <img src="../assests/landing.png" alt="">
+                                            <img src="../assests/hotell.png" alt="">
                                         </div>
-                                        <select id="selectto" onchange="">
+                                        <select id="selecthotel" onchange="">
                                             <option disabled selected value="">Select Hotel</option>
                                         </select>
                                     </div>
@@ -489,7 +447,7 @@
                                     <div class="section">
                                         <div class="card-text">
                                             <p>Rooms</p>
-                                            <img class="card-img" src="../assests/airline.png"
+                                            <img class="card-img" src="../assests/rooms.png"
                                             style="height: 35px; width: 35px;">
                                         </div>
                                         <input id="seats" type="number" placeholder="Enter number of Rooms" min="0" value="1" inputmode="numeric">
@@ -497,26 +455,28 @@
                                     <div class="section">
                                         <div class="card-text">
                                             <p>Persons</p>
-                                            <img class="card-img" src="../assests/airline.png"
+                                            <img class="card-img" src="../assests/group.png"
                                                 style="height: 35px; width: 35px;">
                                         </div>
-                                        <input id="seats" type="number" placeholder="Enter number of Persons" min="0" value="1" inputmode="numeric">
+                                        <input id="Persons" type="number" placeholder="Enter number of Persons" min="0" value="1" inputmode="numeric">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="btn">
-                        <button id="nextBtn" onclick="state()">Next</button>
+                        <button id="nextBtn" onclick="state()" >Next</button>
                     </div>
                 </div>
             </div>
-            <div id="calculation" class="mainbody">
-               <div class="card">
-
-                   <div class="text">
-                       
-                       <div class="name">
+            <div id="calculation" >
+                
+                
+                    <div class="cardes"> 
+                        
+                        <div class="text">
+                            
+                            <div class="name">
                         <h3>PAYMENT DETAILS</h3>
                            <p>Name on card</p>
                            <input type="text">
@@ -545,33 +505,488 @@
                         <div class="state">
                             <p>State/Province</p>
                             <input type="text">
+                        </div>
+                        <div class="pay">
+                            <button id="paynow">Pay Now</button>
+                        </div>
                     </div>
-                    <div class="pay">
-                        <button id="paynow" onclick="state()">Pay Now</button>
                 </div>
 
+                  </div>
+                </div>
+            </div>
 
+        <div id="lodge-container">
+            <div class="lodgemainbody">
+                <div class="lodgesub-bill">
+                    <div class="sub-content">
+                        <p class="f1">Rent : </p>
+                        <p id="Rent" class>0</p>
                     </div>
-                        <div class="btn">
-                            <button id="nextBtn" onclick="state()">Next</button>
+                    <button >Paynow</button>
+            </div>
+            <div id="inclusive-container">
+            <div id="lodgeingmain" >
+                <div class="text">
+                    <div class="subdiv">
+                             <p>Find the Best and Most Affordable <br> Hotel  <span>Across the World!</span> </p>                        
+                       
                     </div>
+                    <div class="booking"> 
+                        <div class="hotles">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>City</p>
+                                            <img src="../assests/city.png" alt="">
+                                        </div>
+                                        <select id="selectcity" onchange="">
+                                            <option disabled selected value="">Select city</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>Hotel</p>
+                                            <img src="../assests/hotell.png" alt="">
+                                        </div>
+                                        <select id="selecthotel" onchange="">
+                                            <option disabled selected value="">Select Hotel</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>Enter</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>Leave</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>Rooms</p>
+                                            <img class="card-img" src="../assests/rooms.png"
+                                            style="height: 35px; width: 35px;">
+                                        </div>
+                                        <input id="seats" type="number" placeholder="Enter number of Rooms" min="0" value="1" inputmode="numeric">
+                                    </div>
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>Persons</p>
+                                            <img class="card-img" src="../assests/group.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <input id="Persons" type="number" placeholder="Enter number of Persons" min="0" value="1" inputmode="numeric">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
                 </div>
             </div>
         </div>
-        <div id="lodge-container">
-<h1>hello lodge</h1>
-        </div>
         <div id="car-container">
-<h1>hello car</h1>
+            <div class="carmainbody">
+                <div class="lodgesub-bill">
+                    <div class="sub-content">
+                        <p class="f1">fare : </p>
+                        <p id="Rent" class>0</p>
+                    </div>
+                    <button >Paynow</button>
+            </div>
+            <div id="inclusive-container">
+            <div id="lodgeingmain" >
+                <div class="text">
+                    <div class="subdiv">
+                             <p>Find the Best and Most Affordable <br> Hotel  <span>Across the World!</span> </p>                        
+   
+                    </div>
+
+                    <div class="booking"> 
+                        <div class="hotles">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>From</p>
+                                            <img src="../assests/car-rent.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>TO</p>
+                                            <img src="../assests/cardrop.png" alt="">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Date</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Seats</p>
+                                            <img class="card-img" src="../assests/car-chair.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Time</p>
+                                            <img class="card-img" src="../assests/clock.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="mean" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+                </div>
+            </div>
         </div>
         <div id="flight-container">
-<h1>hello flight</h1>
+
+            <div class="carmainbody">
+                <div class="lodgesub-bill">
+                    <div class="sub-content">
+                        <p class="f1">fare : </p>
+                        <p id="Rent" class>0</p>
+                    </div>
+                    <button >Paynow</button>
+            </div>
+            <div id="inclusive-container">
+            <div id="lodgeingmain" >
+                <div class="text">
+                    <div class="subdiv">
+                             <p>Find the Best and Most Affordable <br> Hotel  <span>Across the World!</span> </p>                        
+   
+                    </div>
+
+                    <div class="booking"> 
+                        <div class="hotles">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>From</p>
+                                            <img src="../assests/take-offe.png" alt="">
+                                        </div>
+                                        <select id="selectfrom" onchange="">
+                                            <option disabled selected value="">Select an option</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>TO</p>
+                                            <img src="../assests/landing.png" alt="">
+                                        </div>
+                                        <select id="selectto" onchange="">
+                                            <option disabled selected value="">Select an option</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Date</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>Airline</p>
+                                            <img class="card-img" src="../assests/airline.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="selectairline" onchange="">
+                                            <option disabled selected value="">Select an option</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+                                        <div class="card-text">
+                                            <p>Seats</p>
+                                            <img class="card-img" src="../assests/seat.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <input id="seats" type="number" placeholder="Enter number of seats" min="1" value="1" inputmode="numeric">
+                                    </div>
+
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Time</p>
+                                            <img class="card-img" src="../assests/clock.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="flight-time" onchange="">
+                                            <option disabled selected value="">Select an option</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+                </div>
+            </div>
         </div>
         <div id="bus-container">
-<h1>hello bus</h1>
+
+            <div class="carmainbody">
+                <div class="lodgesub-bill">
+                    <div class="sub-content">
+                        <p class="f1">fare : </p>
+                        <p id="Rent" class>0</p>
+                    </div>
+                    <button >Paynow</button>
+            </div>
+            <div id="inclusive-container">
+            <div id="lodgeingmain" >
+                <div class="text">
+                    <div class="subdiv">
+                             <p>Find the Best and Most Affordable <br> Hotel  <span>Across the World!</span> </p>                        
+   
+                    </div>
+
+                    <div class="booking"> 
+                        <div class="hotles">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>From</p>
+                                            <img src="../assests/bus(from).png" alt="">
+                                        </div>
+                                        <select id="selectfrombus" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                         
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>TO</p>
+                                            <img src="../assests/bus(to).png" alt="">
+                                        </div>
+                                        <select id="selecttobus" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                          
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Date</p>
+                                            <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                        </div>
+                                        <input type="date">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Seats</p>
+                                            <img class="card-img" src="../assests/busseats.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <input id="busseats" type="number" placeholder="Enter number of seats" min="1" value="1" inputmode="numeric">
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Service</p> 
+                                            <img class="card-img" src="../assests/busservice.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="busname" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                    <div class="section">
+
+                                        <div class="card-text">
+                                            <p>Time</p>
+                                            <img class="card-img" src="../assests/clock.png"
+                                                style="height: 35px; width: 35px;">
+                                        </div>
+                                        <select id="bustime" onchange="selectTransportation(this.value)">
+                                            <option disabled selected value="">Select an option</option>
+                                            <option value="car">Car Reservation</option>
+                                            <option value="bus">Bus Reservation</option>
+                                            <option value="train">Train Reservation</option>
+                                            <option value="flight">Flight Reservation</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+                </div>
+            </div>
         </div>
         <div id="train-container">
-<h1>hello train</h1>
+
+            <div class="carmainbody">
+                <div class="lodgesub-bill">
+                    <div class="sub-content">
+                        <p class="f1">fare : </p>
+                        <p id="Rent" class>0</p>
+                    </div>
+                    <button >Paynow</button>
+            </div>
+            <div id="inclusive-container">
+            <div id="lodgeingmain" >
+                <div class="text">
+                    <div class="subdiv">
+                             <p>Find the Best and Most Affordable <br> Hotel  <span>Across the World!</span> </p>                        
+   
+                    </div>
+
+                    <div class="booking"> 
+                        <div class="hotles">
+                            <div class="card">
+                              <div class="card-content">
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>From</p>
+                                    <img src="../assests/train(from).png" alt="">
+                                  </div>
+                                  <select id="selectfromtrain">
+                                    <option disabled selected value="">Select an option</option>
+                                  </select>
+                                </div>
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>To</p>
+                                    <img src="../assests/train(to).png " alt="">
+                                  </div>
+                                  <select id="selecttotrain">
+                                    <option disabled selected value="">Select an option</option>
+                                  </select>
+                                </div>
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>Date</p>
+                                    <img src="../assests/calendar.png" style="height: 45px; width: 45px;">
+                                  </div>
+                                  <input type="date">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>Train</p>
+                                    <img class="card-img" src="../assests/trainnn.png">
+                                  </div>
+                                  <select id="selecttrain">
+                                    <option disabled selected value="">Select an option</option>
+                                  </select>
+                                </div>
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>Seats</p>
+                                    <img class="card-img" src="../assests/trainseats.png">
+                                  </div>
+                                  <input id="trainseats" type="number" placeholder="Enter number of seats" min="1" value="1" inputmode="numeric">
+                                </div>
+                                <div class="section">
+                                  <div class="card-text">
+                                    <p>Time</p>
+                                    <img class="card-img" src="../assests/clock.png">
+                                  </div>
+                                  <select id="train-time">
+                                    <option disabled selected value="">Select an option</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+                </div>
+            </div> 
         </div>
 
 </body>
