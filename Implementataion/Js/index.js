@@ -4,6 +4,9 @@ function toExcursion(){
 function toContact(){
   window.location.href = "../Pages/contact.html";
 }
+function toAbout(){
+  window.location.href = "../Pages/about.html";
+}
 
 
 function setstate(id) {
